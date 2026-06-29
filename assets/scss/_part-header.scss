@@ -1,0 +1,42 @@
+@use "header-overlay.scss";
+@use "header-menu-nav.scss";
+@use "bars";
+
+header#part-header {
+  background-color: var(--cp-1-900);
+  color: var(--cp-bg-primary);
+  padding-top: 0.5rem;
+  padding-right: calc(0.5rem + 5px);
+  padding-left: 0.5rem;
+  position: relative;
+  height: 90px;
+
+  .container {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 60px;
+    @media (min-width: 768px) {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    #phe-left {
+      a {
+        font-weight: var(--fw-800);
+        color: var(--cp-bg-primary);
+        letter-spacing: 1px;
+        display: block;
+        font-size: 1rem;
+      }
+      text-align: left;
+    }
+    #phe-right {
+      display: grid;
+      grid-template-columns: 1fr 30px;
+      align-items: center;
+      justify-content: end;
+      gap: 1rem;
+    }
+  }
+}

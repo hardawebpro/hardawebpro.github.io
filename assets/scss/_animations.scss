@@ -1,0 +1,16 @@
+.anim {
+	position: relative;
+	transition: 0.3s linear all;
+	&.hover-bg-dark {
+		&:hover {
+			box-shadow: unset;
+			background: linear-gradient(
+				to right,
+				#000000,
+				var(--trans-dark-7),
+				#000000
+			);
+			color: var(--cp-bg-primary);
+		}
+	}
+}

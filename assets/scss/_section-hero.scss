@@ -1,0 +1,31 @@
+section#section-hero {
+  --she-py: 6rem;
+  background-color: var(--cp-1-900);
+  color: var(--cp-bg-primary);
+  padding-top: var(--she-py);
+  padding-bottom: var(--she-py);
+  @media (min-width: 769px) {
+    --she-py: unset;
+    height: calc(100vh - 90px);
+  }
+  a {
+    color: var(--cp-bg-primary);
+  }
+  .container {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    #she-top {
+      text-align: center;
+    }
+    #she-bot {
+      text-align: center;
+      ul.lns {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+#header-overlay {
+  background-color: var(--cp-3-800);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100vh;
+  z-index: 888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  a {
+    color: var(--cp-bg-primary);
+  }
+  transform: translateX(100%);
+  transition: 0.3s linear all;
+  &.active {
+    transform: translateX(0);
+  }
+}

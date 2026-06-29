@@ -1,0 +1,77 @@
+.honey-bg {
+	position: relative;
+	z-index: 0;
+	--wh-honey-bg: 300px;
+	@media (min-width: 1024px) {
+		--wh-honey-bg: 500px;
+	}
+	&:before {
+		content: "";
+		z-index: -1;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: var(--wh-honey-bg);
+		height: var(--wh-honey-bg);
+		opacity: 0.8;
+		background-color: #f7f7fc;
+		opacity: 0.1;
+		background-image:
+			radial-gradient(
+				circle farthest-side at 0% 50%,
+				#f7f7fc 23.5%,
+				transparent 0
+			),
+			radial-gradient(
+				circle farthest-side at 0% 50%,
+				#444cf7 24%,
+				transparent 0
+			),
+			linear-gradient(
+				#f7f7fc 14%,
+				transparent 0,
+				transparent 85%,
+				#f7f7fc 0
+			),
+			linear-gradient(
+				150deg,
+				#f7f7fc 24%,
+				#444cf7 0 26%,
+				transparent 0 74%,
+				#444cf7 0 76%,
+				#f7f7fc 0
+			),
+			linear-gradient(
+				30deg,
+				#f7f7fc 24%,
+				#444cf7 0 26%,
+				transparent 0 74%,
+				#444cf7 0 76%,
+				#f7f7fc 0
+			),
+			linear-gradient(90deg, #444cf7 1.6%, #f7f7fc 0 98.4%, #444cf7 0);
+		background-position:
+			30px 43px,
+			27px 43px,
+			0 0,
+			0 0,
+			0 0,
+			0 0;
+		background-size: 57px 86px;
+		mask-image: radial-gradient(
+			ellipse at center,
+			rgba(0, 0, 0, 0.7) 0%,
+			rgba(0, 0, 0, 0) 75%
+		);
+		-webkit-mask-image: radial-gradient(
+			ellipse at center,
+			rgba(0, 0, 0, 0.7) 0%,
+			rgba(0, 0, 0, 0) 75%
+		);
+		mask-size: 100% 100%;
+		-webkit-mask-size: 100% 100%;
+		mask-repeat: no-repeat;
+		-webkit-mask-repeat: no-repeat;
+	}
+}
