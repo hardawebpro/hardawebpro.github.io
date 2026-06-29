@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website resmi Masjid Al Istiqomah — jadwal sholat, kegiatan rutin, agenda, pengurus DKM, dan laporan keuangan transparan. Ciledug, Kota Tangerang.">
+  <meta name="keywords" content="Masjid Al Istiqomah, jadwal sholat Tangerang, kajian Islam, TPA, pengurus DKM, infak masjid, Ciledug">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Masjid Al Istiqomah — Jadwal, Kegiatan & Info Jamaah">
+  <meta property="og:description" content="Pusat informasi jamaah: waktu sholat, jadwal kajian, agenda, pengurus DKM, dan transparansi keuangan masjid.">
+  <meta property="og:type" content="website">
+  <title>Masjid Al Istiqomah — Jadwal Sholat, Kegiatan & Info Jamaah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ✦ DEMO NOTICE ✦ -->
+  <div class="hwp-demo-bar" id="hwpDemoBar" role="alert" aria-live="polite">
+    <div class="hwp-container hwp-demo-bar-inner">
+      <span>✨ <strong>Demo Desain Dummy</strong> — Contoh karya oleh <a href="https://hardawebpro.com" target="_blank" rel="noopener">HardaWebPro.com</a>. Ingin website masjid seperti ini? <a href="https://hardawebpro.com" target="_blank" rel="noopener">Hubungi kami →</a></span>
+      <button class="hwp-demo-close" id="hwpDemoClose" aria-label="Tutup notifikasi">×</button>
+    </div>
+  </div>
+
+  <!-- ✦ TOPBAR — Hijri date + next prayer countdown ✦ -->
+  <div class="hwp-topbar" role="complementary" aria-label="Informasi waktu Islam">
+    <div class="hwp-container hwp-topbar-inner">
+      <span class="hwp-topbar-date">
+        <span id="hwpHijriDate">—</span>
+        <span class="hwp-topbar-sep" aria-hidden="true">·</span>
+        <span id="hwpGregorianDate">—</span>
+      </span>
+      <span class="hwp-topbar-prayer" aria-label="Waktu sholat berikutnya">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+        <span id="hwpNextPrayerLabel">—</span>
+        <strong id="hwpNextPrayerTime">—</strong>
+        <span class="hwp-countdown-badge" id="hwpCountdown" aria-live="polite">—</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ✦ HEADER ✦ -->
+  <header class="hwp-header" id="hwpHeader" role="banner">
+    <div class="hwp-container hwp-header-inner">
+
+      <a href="#" class="hwp-logo" aria-label="Masjid Al Istiqomah — Beranda">
+        <span class="hwp-logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="26" cy="18" rx="13" ry="9" fill="currentColor"/>
+            <rect x="4" y="15" width="5" height="22" rx="1.5" fill="currentColor"/>
+            <ellipse cx="6.5" cy="14" rx="3" ry="4" fill="currentColor"/>
+            <rect x="5.5" y="8" width="2" height="6" rx="1" fill="currentColor"/>
+            <rect x="43" y="15" width="5" height="22" rx="1.5" fill="currentColor"/>
+            <ellipse cx="45.5" cy="14" rx="3" ry="4" fill="currentColor"/>
+            <rect x="44.5" y="8" width="2" height="6" rx="1" fill="currentColor"/>
+            <rect x="13" y="25" width="26" height="12" rx="1.5" fill="currentColor"/>
+            <path d="M21 37 Q21 30 26 30 Q31 30 31 37Z" fill="var(--hwp-c-bg)"/>
+            <rect x="2" y="37" width="48" height="5" rx="1.5" fill="currentColor" opacity="0.85"/>
+            <path d="M25 8 A5 5 0 0 1 25 18 A3 3 0 0 0 25 8Z" fill="white" opacity="0.5"/>
+          </svg>
+        </span>
+        <div class="hwp-logo-text">
+          <span class="hwp-logo-ar" lang="ar" aria-hidden="true">الإستقامة</span>
+          <span class="hwp-logo-id">Masjid Al Istiqomah</span>
+        </div>
+      </a>
+
+      <div class="hwp-header-controls">
+        <div class="hwp-font-ctrl" role="group" aria-label="Ukuran teks">
+          <button class="hwp-ctrl-btn hwp-font-sm" id="hwpFontDec" aria-label="Perkecil teks">A<sup>−</sup></button>
+          <button class="hwp-ctrl-btn" id="hwpFontReset" aria-label="Reset ukuran teks">A</button>
+          <button class="hwp-ctrl-btn hwp-font-lg" id="hwpFontInc" aria-label="Perbesar teks">A<sup>+</sup></button>
+        </div>
+        <button class="hwp-ctrl-btn hwp-dark-toggle" id="hwpDarkToggle" aria-label="Ganti mode gelap/terang" aria-pressed="false">
+          <svg class="hwp-ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="hwp-ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hwp-hamburger" id="hwpHamburger" aria-expanded="false" aria-controls="hwpNav" aria-label="Buka menu navigasi">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="hwp-nav" id="hwpNav" aria-label="Navigasi utama">
+        <ul role="list">
+          <li><a href="#hwp-sholat" class="hwp-nav-link">Sholat</a></li>
+          <li><a href="#hwp-jadwal" class="hwp-nav-link">Kegiatan</a></li>
+          <li><a href="#hwp-agenda" class="hwp-nav-link">Agenda</a></li>
+          <li><a href="#hwp-pengurus" class="hwp-nav-link">Pengurus</a></li>
+          <li><a href="#hwp-kas" class="hwp-nav-link">Keuangan</a></li>
+          <li><a href="#hwp-galeri" class="hwp-nav-link">Galeri</a></li>
+          <li><a href="#hwp-kontak" class="hwp-nav-link hwp-nav-cta">Kontak</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="hwp-main">
+
+    <!-- ✦ HERO ✦ -->
+    <section class="hwp-hero" id="hwp-hero" aria-labelledby="hwpHeroTitle">
+      <div class="hwp-hero-overlay" aria-hidden="true">
+        <canvas class="hwp-hero-canvas" id="hwpHeroCanvas"></canvas>
+        <div class="hwp-mosque-silhouette" aria-hidden="true">
+          <svg viewBox="0 0 1440 380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+            <g fill="white" opacity="0.06">
+              <ellipse cx="720" cy="195" rx="140" ry="105"/>
+              <rect x="580" y="275" width="280" height="105"/>
+              <rect x="545" y="155" width="30" height="225"/>
+              <ellipse cx="560" cy="150" rx="20" ry="32"/>
+              <rect x="553" y="118" width="14" height="32"/>
+              <rect x="865" y="155" width="30" height="225"/>
+              <ellipse cx="880" cy="150" rx="20" ry="32"/>
+              <rect x="873" y="118" width="14" height="32"/>
+              <ellipse cx="280" cy="270" rx="75" ry="58"/>
+              <rect x="205" y="310" width="150" height="70"/>
+              <rect x="188" y="240" width="18" height="140"/>
+              <ellipse cx="197" cy="236" rx="12" ry="22"/>
+              <ellipse cx="1160" cy="270" rx="75" ry="58"/>
+              <rect x="1085" y="310" width="150" height="70"/>
+              <rect x="1234" y="240" width="18" height="140"/>
+              <ellipse cx="1243" cy="236" rx="12" ry="22"/>
+              <ellipse cx="430" cy="300" rx="18" ry="42"/>
+              <rect x="427" y="320" width="6" height="60"/>
+              <ellipse cx="1010" cy="300" rx="18" ry="42"/>
+              <rect x="1007" y="320" width="6" height="60"/>
+              <rect x="0" y="375" width="1440" height="5"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="hwp-container hwp-hero-content">
+        <p class="hwp-bismillah" lang="ar" aria-label="Bismillahirrahmanirrahim">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</p>
+        <h1 class="hwp-hero-title" id="hwpHeroTitle">
+          Masjid Al Istiqomah
+          <em class="hwp-hero-ar" lang="ar">مَسۡجِدُ الإِسۡتِقَامَة</em>
+        </h1>
+        <p class="hwp-hero-tagline">Bersama Memakmurkan Masjid · Meneguhkan Iman · Menyebarkan Ilmu · Mengokohkan Ukhuwah</p>
+        <div class="hwp-hero-clock" aria-live="polite" aria-atomic="true">
+          <span class="hwp-live-time" id="hwpClock">00:00:00</span>
+          <span class="hwp-live-date" id="hwpHeroDate">—</span>
+        </div>
+        <div class="hwp-hero-cta">
+          <a href="#hwp-sholat" class="hwp-btn hwp-btn-gold">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+            Waktu Sholat
+          </a>
+          <a href="#hwp-jadwal" class="hwp-btn hwp-btn-ghost">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+            Jadwal Kegiatan
+          </a>
+        </div>
+      </div>
+      <a href="#hwp-sholat" class="hwp-hero-scroll" aria-label="Gulir ke bawah">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </section>
+
+    <!-- ✦ WAKTU SHOLAT ✦ -->
+    <section class="hwp-section" id="hwp-sholat" aria-labelledby="hwpSholatTitle">
+      <div class="hwp-container">
+        <div class="hwp-sec-head">
+          <span class="hwp-ornament" aria-hidden="true"></span>
+          <h2 class="hwp-sec-title" id="hwpSholatTitle">Waktu Sholat Hari Ini</h2>
+          <p class="hwp-sec-sub">Ciledug, Kota Tangerang · <span id="hwpSholatDate">—</span></p>
+        </div>
+        <div class="hwp-sholat-grid" id="hwpSholatGrid" role="list" aria-label="Jadwal waktu sholat">
+          <!-- rendered by JS -->
+        </div>
+        <p class="hwp-sholat-note">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+          Waktu berdasarkan perhitungan astronomis. Konfirmasi dengan pengumuman lokal.
+        </p>
+      </div>
+    </section>
+
+    <!-- ✦ JADWAL KEGIATAN ✦ -->
+    <section class="hwp-section hwp-section-alt" id="hwp-jadwal" aria-labelledby="hwpJadwalTitle">
+      <div class="hwp-container">
+        <div class="hwp-sec-head">
+          <span class="hwp-ornament" aria-hidden="true"></span>
+          <h2 class="hwp-sec-title" id="hwpJadwalTitle">Jadwal Kegiatan Rutin</h2>
+          <p class="hwp-sec-sub">Program mingguan Masjid Al Istiqomah</p>
+        </div>
+        <div class="hwp-filter-tabs" role="tablist" aria-label="Filter kegiatan berdasarkan hari">
+          <button class="hwp-filter-btn active" data-filter="all" role="tab" aria-selected="true">Semua</button>
+          <button class="hwp-filter-btn" data-filter="Senin" role="tab" aria-selected="false">Senin</button>
+          <button class="hwp-filter-btn" data-filter="Selasa" role="tab" aria-selected="false">Selasa</button>
+          <button class="hwp-filter-btn" data-filter="Rabu" role="tab" aria-selected="false">Rabu</button>
+          <button class="hwp-filter-btn" data-filter="Kamis" role="tab" aria-selected="false">Kamis</button>
+          <button class="hwp-filter-btn" data-filter="Jumat" role="tab" aria-selected="false">Jum'at</button>
+          <button class="hwp-filter-btn" data-filter="Sabtu" role="tab" aria-selected="false">Sabtu</button>
+          <button class="hwp-filter-btn" data-filter="Minggu" role="tab" aria-selected="false">Minggu</button>
+        </div>
+        <div class="hwp-jadwal-list" id="hwpJadwalList" role="tabpanel" aria-label="Daftar kegiatan">
+          <!-- rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ✦ AGENDA ✦ -->
+    <section class="hwp-section" id="hwp-agenda" aria-labelledby="hwpAgendaTitle">
+      <div class="hwp-container">
+        <div class="hwp-sec-head">
+          <span class="hwp-ornament" aria-hidden="true"></span>
+          <h2 class="hwp-sec-title" id="hwpAgendaTitle">Agenda Mendatang</h2>
+          <p class="hwp-sec-sub">Kegiatan & acara khusus yang akan datang</p>
+        </div>
+        <div class="hwp-agenda-list" id="hwpAgendaList" role="list" aria-label="Daftar agenda">
+          <!-- rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ✦ PENGURUS DKM ✦ -->
+    <section class="hwp-section hwp-section-alt" id="hwp-pengurus" aria-labelledby="hwpPengurusTitle">
+      <div class="hwp-container">
+        <div class="hwp-sec-head">
+          <span class="hwp-ornament" aria-hidden="true"></span>
+          <h2 class="hwp-sec-title" id="hwpPengurusTitle">Pengurus DKM</h2>
+          <p class="hwp-sec-sub">Dewan Kemakmuran Masjid Al Istiqomah · Periode 2023–2026</p>
+        </div>
+        <div class="hwp-pengurus-grid" id="hwpPengurusGrid" role="list" aria-label="Daftar pengurus DKM">
+          <!-- rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ✦ TRANSPARANSI KEUANGAN ✦ -->
+    <section class="hwp-section hwp-section-kas" id="hwp-kas" aria-labelledby="hwpKasTitle">
+      <div class="hwp-container">
+        <div class="hwp-sec-head">
+          <span class="hwp-ornament hwp-ornament-inv" aria-hidden="true"></span>
+          <h2 class="hwp-sec-title hwp-title-inv" id="hwpKasTitle">Transparansi Keuangan</h2>
+          <p class="hwp-sec-sub hwp-sub-inv">Laporan kas & infak — Amanah adalah prioritas utama</p>
+        </div>
+        <div class="hwp-kas-summary" id="hwpKasSummary" role="list" aria-label="Ringkasan keuangan">
+          <!-- rendered by JS -->
+        </div>
+        <div class="hwp-kas-box">
+          <div class="hwp-kas-box-head">
+            <h3 class="hwp-kas-periode-title" id="hwpKasPeriodeTitle">—</h3>
+            <div class="hwp-kas-tabs" role="group" aria-label="Pilih periode laporan">
+              <button class="hwp-kas-tab active" data-period="0">Bulan Ini</button>
+              <button class="hwp-kas-tab" data-period="1">Bulan Lalu</button>
+              <button class="hwp-kas-tab" data-period="2">2 Bulan Lalu</button>
+            </div>
+          </div>
+          <div class="hwp-table-wrapper">
+            <table class="hwp-kas-table" id="hwpKasTable" role="table">
+              <caption class="hwp-sr-only">Detail transaksi keuangan Masjid Al Istiqomah</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Tgl</th>
+                  <th scope="col">Keterangan</th>
+                  <th scope="col" class="hwp-td-cat">Kategori</th>
+                  <th scope="col" class="hwp-text-r">Masuk (Rp)</th>
+                  <th scope="col" class="hwp-text-r">Keluar (Rp)</th>
+                </tr>
+              </thead>
+              <tbody id="hwpKasBody"><!-- rendered by JS --></tbody>
+              <tfoot id="hwpKasFoot"><!-- rendered by JS --></tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✦ GALERI ✦ -->
+    <section class="hwp-section" id="hwp-galeri" aria-labelledby="hwpGaleriTitle">
+      <div class="hwp-container">
+        <div class="hwp-sec-head">
+          <span class="hwp-ornament" aria-hidden="true"></span>
+          <h2 class="hwp-sec-title" id="hwpGaleriTitle">Galeri Kegiatan</h2>
+          <p class="hwp-sec-sub">Dokumentasi momen & kegiatan jamaah Masjid Al Istiqomah</p>
+        </div>
+        <div class="hwp-galeri-grid" id="hwpGaleriGrid" role="list" aria-label="Galeri foto kegiatan">
+          <!-- rendered by JS -->
+        </div>
+      </div>
+      <!-- Lightbox -->
+      <div class="hwp-lightbox" id="hwpLightbox" role="dialog" aria-modal="true" aria-label="Tampilan foto" hidden>
+        <button class="hwp-lb-close" id="hwpLbClose" aria-label="Tutup">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <button class="hwp-lb-nav hwp-lb-prev" id="hwpLbPrev" aria-label="Sebelumnya">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="hwp-lb-stage">
+          <img src="" alt="" id="hwpLbImg" class="hwp-lb-img">
+          <p class="hwp-lb-cap" id="hwpLbCap"></p>
+        </div>
+        <button class="hwp-lb-nav hwp-lb-next" id="hwpLbNext" aria-label="Berikutnya">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ✦ KONTAK ✦ -->
+    <section class="hwp-section hwp-section-kontak" id="hwp-kontak" aria-labelledby="hwpKontakTitle">
+      <div class="hwp-container">
+        <div class="hwp-sec-head">
+          <span class="hwp-ornament hwp-ornament-inv" aria-hidden="true"></span>
+          <h2 class="hwp-sec-title hwp-title-inv" id="hwpKontakTitle">Hubungi Kami</h2>
+          <p class="hwp-sec-sub hwp-sub-inv">Pengurus siap melayani pertanyaan & keperluan jamaah</p>
+        </div>
+        <div class="hwp-kontak-wrap">
+          <div class="hwp-kontak-info">
+            <address class="hwp-kontak-address" style="font-style:normal">
+              <div class="hwp-kontak-item">
+                <span class="hwp-kontak-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <div>
+                  <strong>Alamat Masjid</strong>
+                  <p>Jl. Al Istiqomah No. 17, RT 05/RW 02<br>Ciledug, Kota Tangerang, Banten 15151</p>
+                </div>
+              </div>
+              <div class="hwp-kontak-item">
+                <span class="hwp-kontak-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+                <div>
+                  <strong>Jam Sekretariat</strong>
+                  <p>Senin – Jumat: 08.00 – 12.00<br>Sabtu – Minggu: 08.00 – 14.00</p>
+                </div>
+              </div>
+            </address>
+            <div class="hwp-wa-list" id="hwpWaList" role="list" aria-label="Kontak WhatsApp pengurus">
+              <!-- rendered by JS -->
+            </div>
+          </div>
+          <div class="hwp-kontak-map" role="img" aria-label="Peta lokasi Masjid Al Istiqomah, Ciledug, Tangerang">
+            <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" class="hwp-map-svg" aria-hidden="true">
+              <rect width="480" height="340" fill="#e8f4f0" rx="10"/>
+              <line x1="0" y1="170" x2="480" y2="170" stroke="white" stroke-width="16"/>
+              <line x1="0" y1="170" x2="480" y2="170" stroke="#ccc" stroke-width="12" stroke-dasharray="22 9"/>
+              <line x1="240" y1="0" x2="240" y2="340" stroke="white" stroke-width="11"/>
+              <line x1="110" y1="0" x2="110" y2="340" stroke="white" stroke-width="7"/>
+              <line x1="370" y1="0" x2="370" y2="340" stroke="white" stroke-width="7"/>
+              <line x1="0" y1="85" x2="480" y2="85" stroke="white" stroke-width="6"/>
+              <line x1="0" y1="255" x2="480" y2="255" stroke="white" stroke-width="6"/>
+              <rect x="18" y="18" width="78" height="57" rx="4" fill="#c8e6c9"/>
+              <rect x="126" y="18" width="98" height="57" rx="4" fill="#bbdefb"/>
+              <rect x="258" y="18" width="90" height="57" rx="4" fill="#c8e6c9"/>
+              <rect x="386" y="18" width="78" height="57" rx="4" fill="#bbdefb"/>
+              <rect x="18" y="190" width="78" height="56" rx="4" fill="#bbdefb"/>
+              <rect x="126" y="190" width="98" height="56" rx="4" fill="#c8e6c9"/>
+              <rect x="258" y="190" width="90" height="56" rx="4" fill="#bbdefb"/>
+              <rect x="386" y="190" width="78" height="56" rx="4" fill="#c8e6c9"/>
+              <circle cx="240" cy="170" r="28" fill="#1B6B47"/>
+              <circle cx="240" cy="170" r="23" fill="white"/>
+              <ellipse cx="240" cy="163" rx="10" ry="7" fill="#1B6B47"/>
+              <rect x="233" y="168" width="14" height="11" fill="#1B6B47"/>
+              <rect x="229" y="165" width="4.5" height="14" fill="#1B6B47" rx="0.5"/>
+              <rect x="246.5" y="165" width="4.5" height="14" fill="#1B6B47" rx="0.5"/>
+              <rect x="2" y="334" width="476" height="4" fill="#C8962F" opacity="0.25" rx="0 0 10 10"/>
+              <rect x="160" y="207" width="160" height="30" rx="6" fill="white" opacity="0.96" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.2))"/>
+              <text x="240" y="227" font-size="11.5" text-anchor="middle" fill="#1B6B47" font-weight="700" font-family="sans-serif">Masjid Al Istiqomah</text>
+            </svg>
+            <a href="https://maps.google.com/?q=Masjid+Al+Istiqomah+Ciledug+Tangerang" target="_blank" rel="noopener" class="hwp-map-link">
+              Buka di Google Maps
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ✦ FOOTER ✦ -->
+  <footer class="hwp-footer" id="hwp-footer" role="contentinfo">
+    <div class="hwp-container">
+      <div class="hwp-footer-grid">
+
+        <div class="hwp-footer-brand">
+          <a href="#" class="hwp-logo hwp-logo-inv" aria-label="Masjid Al Istiqomah">
+            <span class="hwp-logo-icon" aria-hidden="true">
+              <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="26" cy="18" rx="13" ry="9" fill="currentColor"/>
+                <rect x="4" y="15" width="5" height="22" rx="1.5" fill="currentColor"/>
+                <ellipse cx="6.5" cy="14" rx="3" ry="4" fill="currentColor"/>
+                <rect x="43" y="15" width="5" height="22" rx="1.5" fill="currentColor"/>
+                <ellipse cx="45.5" cy="14" rx="3" ry="4" fill="currentColor"/>
+                <rect x="13" y="25" width="26" height="12" rx="1.5" fill="currentColor"/>
+                <path d="M21 37 Q21 30 26 30 Q31 30 31 37Z" fill="rgba(0,0,0,0.35)"/>
+                <rect x="2" y="37" width="48" height="5" rx="1.5" fill="currentColor" opacity="0.85"/>
+              </svg>
+            </span>
+            <div class="hwp-logo-text">
+              <span class="hwp-logo-ar" lang="ar" aria-hidden="true">الإستقامة</span>
+              <span class="hwp-logo-id">Masjid Al Istiqomah</span>
+            </div>
+          </a>
+          <blockquote class="hwp-footer-ayat">
+            <p lang="ar">إِنَّمَا يَعۡمُرُ مَسَٰجِدَ ٱللَّهِ مَنۡ ءَامَنَ بِٱللَّهِ وَٱلۡيَوۡمِ ٱلۡأٓخِرِ</p>
+            <footer>"Sesungguhnya yang memakmurkan masjid Allah hanyalah orang yang beriman kepada Allah dan hari akhir."<cite> — At-Taubah: 18</cite></footer>
+          </blockquote>
+        </div>
+
+        <nav class="hwp-footer-nav" aria-label="Navigasi footer">
+          <h3>Menu</h3>
+          <ul role="list">
+            <li><a href="#hwp-sholat">Waktu Sholat</a></li>
+            <li><a href="#hwp-jadwal">Jadwal Kegiatan</a></li>
+            <li><a href="#hwp-agenda">Agenda</a></li>
+            <li><a href="#hwp-pengurus">Pengurus DKM</a></li>
+            <li><a href="#hwp-kas">Info Keuangan</a></li>
+            <li><a href="#hwp-galeri">Galeri</a></li>
+            <li><a href="#hwp-kontak">Kontak</a></li>
+          </ul>
+        </nav>
+
+        <div class="hwp-footer-doa">
+          <h3>Doa Hari Ini</h3>
+          <div class="hwp-doa-card" id="hwpDoaCard">
+            <p class="hwp-doa-ar" lang="ar" id="hwpDoaAr"></p>
+            <p class="hwp-doa-latin" id="hwpDoaLatin"></p>
+            <p class="hwp-doa-arti" id="hwpDoaArti"></p>
+            <button class="hwp-doa-btn" id="hwpDoaNext" aria-label="Tampilkan doa berikutnya">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              Doa Lainnya
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hwp-footer-bottom">
+        <p>&copy; <span id="hwpYear"></span> Masjid Al Istiqomah. Semua hak dilindungi.</p>
+        <div class="hwp-hwp-notice" role="note">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span>Demo desain oleh <a href="https://hardawebpro.com" target="_blank" rel="noopener">HardaWebPro.com</a> — Jasa Pembuatan Website Masjid & Profesional</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✦ WhatsApp FAB ✦ -->
+  <div class="hwp-wa-fab" id="hwpWaFab" aria-label="Kontak WhatsApp">
+    <button class="hwp-wa-fab-btn" id="hwpWaFabBtn" aria-expanded="false" aria-controls="hwpWaFabMenu" aria-label="Buka daftar kontak WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </button>
+    <div class="hwp-wa-fab-menu" id="hwpWaFabMenu" hidden>
+      <!-- rendered by JS -->
+    </div>
+  </div>
+
+  <!-- ✦ Back to Top ✦ -->
+  <button class="hwp-back-top" id="hwpBackTop" aria-label="Kembali ke atas" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
