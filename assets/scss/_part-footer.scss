@@ -1,0 +1,14 @@
+footer#part-footer {
+  background-color: var(--cp-1-900);
+  color: var(--cp-bg-primary);
+  padding: 1rem 0;
+  .container {
+    p {
+      text-align: center;
+      margin: 0;
+      font-size: var(--fs-12);
+      font-weight: var(--fw-400);
+      line-height: 1.5;
+    }
+  }
+}
