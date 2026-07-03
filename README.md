@@ -14,6 +14,7 @@ HardaWebPro menggunakan repositori ini sebagai etalase karya di GitHub. Halaman 
 | ------------ | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Masjid 1** | [`/masjid-1/`](masjid-1/) | Prototype website masjid _Masjid Al Istiqomah_ — agenda kegiatan, kajian, transparansi kas, pengurus, dan kontak jamaah. Dilengkapi mode gelap serta pengaturan ukuran teks.           |
 | **Masjid 2** | [`/masjid-2/`](masjid-2/) | Varian desain website masjid _Masjid Al Istiqomah_ — jadwal sholat, countdown waktu sholat berikutnya, tanggal Hijriah, kegiatan rutin, pengurus DKM, dan laporan keuangan transparan. |
+| **Compro Minimalis 1** | [`/compro-minimalis-1/`](compro-minimalis-1/) | Company profile B2B minimalis untuk _Kenko Electric Indonesia_ — supplier timbangan digital untuk bisnis, retail, gudang, dan industri. Satu halaman dengan konsultasi produk, FAQ, dan form kontak. |
 
 ## Struktur Folder
 
@@ -33,6 +34,10 @@ HardaWebPro menggunakan repositori ini sebagai etalase karya di GitHub. Halaman 
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
+├── compro-minimalis-1/     # Demo company profile B2B minimalis
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
 ├── gulpfile.js             # Task Gulp untuk kompilasi SCSS
 └── package.json
 ```
@@ -40,7 +45,7 @@ HardaWebPro menggunakan repositori ini sebagai etalase karya di GitHub. Halaman 
 ## Teknologi
 
 - **Halaman utama:** HTML5, SCSS (dikompilasi dengan Gulp + Sass), CSS minified
-- **Demo masjid:** HTML5, CSS, JavaScript vanilla — tanpa dependensi runtime
+- **Demo statis:** HTML5, CSS, JavaScript vanilla — tanpa dependensi runtime (masjid, company profile, kontraktor, dll.)
 - **Build tool:** [Gulp](https://gulpjs.com/) 5, [Sass](https://sass-lang.com/), Autoprefixer, CleanCSS
 
 ## Pengembangan Lokal
