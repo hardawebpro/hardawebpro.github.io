@@ -986,6 +986,71 @@ body.hwp-dark .hwp-contact-panel {
   color: #f2c36d;
 }
 
+.hwp-foot-social {
+  padding-bottom: 2rem;
+}
+
+.hwp-foot-social > p {
+  margin: 0 0 .75rem;
+  color: #ffffff;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.hwp-foot-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hwp-foot-social-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.hwp-foot-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(216, 232, 222, .2);
+  border-radius: .55rem;
+  background: rgba(216, 232, 222, .06);
+  color: #d8e8de;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .15s ease;
+}
+
+.hwp-foot-social-link:hover,
+.hwp-foot-social-link:focus-visible {
+  background: #f2c36d;
+  border-color: #f2c36d;
+  color: #10231c;
+  transform: translateY(-2px);
+}
+
+.hwp-foot-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hwp-foot-social-link {
+    transition: none;
+  }
+
+  .hwp-foot-social-link:hover,
+  .hwp-foot-social-link:focus-visible {
+    transform: none;
+  }
+}
+
 .hwp-foot-low {
   display: grid;
   gap: .35rem;

@@ -1282,6 +1282,64 @@ strong { color: var(--hwp-c-text); font-weight: 600; }
 }
 .hwp-footer-nav a:hover { color: var(--hwp-gold-400); }
 
+.hwp-footer-social {
+  margin-bottom: var(--hwp-sp10);
+}
+
+.hwp-footer-social h3 {
+  color: white;
+  font-family: var(--hwp-ff-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: var(--hwp-sp5);
+}
+
+.hwp-footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--hwp-sp2);
+}
+
+.hwp-footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--hwp-r-lg);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.75);
+  transition: background-color var(--hwp-t), border-color var(--hwp-t), color var(--hwp-t), transform .15s ease;
+}
+
+.hwp-footer-social-link:hover,
+.hwp-footer-social-link:focus-visible {
+  background: var(--hwp-gold-600);
+  border-color: var(--hwp-gold-600);
+  color: var(--hwp-green-950);
+  transform: translateY(-2px);
+}
+
+.hwp-footer-social-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hwp-footer-social-link {
+    transition: none;
+  }
+
+  .hwp-footer-social-link:hover,
+  .hwp-footer-social-link:focus-visible {
+    transform: none;
+  }
+}
+
 /* Doa widget */
 .hwp-doa-card {
   background: rgba(255,255,255,.06);
