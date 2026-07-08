@@ -10,10 +10,10 @@ HardaWebPro menggunakan repositori ini sebagai etalase karya di GitHub. Halaman 
 
 ## Demo yang Tersedia
 
-| Demo         | Path                      | Deskripsi                                                                                                                                                                              |
-| ------------ | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Masjid 1** | [`/masjid-1/`](masjid-1/) | Prototype website masjid _Masjid Al Istiqomah_ — agenda kegiatan, kajian, transparansi kas, pengurus, dan kontak jamaah. Dilengkapi mode gelap serta pengaturan ukuran teks.           |
-| **Masjid 2** | [`/masjid-2/`](masjid-2/) | Varian desain website masjid _Masjid Al Istiqomah_ — jadwal sholat, countdown waktu sholat berikutnya, tanggal Hijriah, kegiatan rutin, pengurus DKM, dan laporan keuangan transparan. |
+| Demo                   | Path                                          | Deskripsi                                                                                                                                                                                            |
+| ---------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Masjid 1**           | [`/masjid-1/`](masjid-1/)                     | Prototype website masjid _Masjid Al Istiqomah_ — agenda kegiatan, kajian, transparansi kas, pengurus, dan kontak jamaah. Dilengkapi mode gelap serta pengaturan ukuran teks.                         |
+| **Masjid 2**           | [`/masjid-2/`](masjid-2/)                     | Varian desain website masjid _Masjid Al Istiqomah_ — jadwal sholat, countdown waktu sholat berikutnya, tanggal Hijriah, kegiatan rutin, pengurus DKM, dan laporan keuangan transparan.               |
 | **Compro Minimalis 1** | [`/compro-minimalis-1/`](compro-minimalis-1/) | Company profile B2B minimalis untuk _Kenko Electric Indonesia_ — supplier timbangan digital untuk bisnis, retail, gudang, dan industri. Satu halaman dengan konsultasi produk, FAQ, dan form kontak. |
 
 ## Struktur Folder
@@ -89,3 +89,15 @@ Buka `index.html` langsung di browser, atau gunakan server lokal (misalnya Live 
 ---
 
 _Prototype & demo preview oleh [HardaWebPro](https://hardawebpro.com) — Web Developer Indonesia._
+
+---
+
+# Desain Terbaru
+
+https://hardawebpro.github.io/masjid-1/
+https://hardawebpro.github.io/masjid-2/
+https://hardawebpro.github.io/kontraktor-electrical-1/
+https://hardawebpro.github.io/compro-minimalis-1/
+https://hardawebpro.github.io/jasa-cleaning-service/
+https://hardawebpro.github.io/jasa-kargo-logistik/
+https://hardawebpro.github.io/smp-yapia-cipadu/
