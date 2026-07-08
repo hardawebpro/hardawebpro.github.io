@@ -12,6 +12,8 @@ https://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=9BB77FDA801248A5AD23
 
 ---
 
+# SMP Yapia Cipadu
+
 https://clients1.google.nl/url?q=https%3A%2F%2Fhardawebpro.com
 https://cse.google.ru/url?sa=i&url=https%3A%2F%2Fhardawebpro.com
 https://clients1.google.pl/url?sa=t&url=https%3A%2F%2Fhardawebpro.com
@@ -22,6 +24,9 @@ https://cse.google.com.tw/url?q=https%3A%2F%2Fhardawebpro.com
 https://cse.google.com.mx/url?sa=i&url=https%3A%2F%2Fhardawebpro.com
 https://cse.google.cz/url?sa=i&url=https%3A%2F%2Fhardawebpro.com
 https://cse.google.com.ar/url?sa=t&url=https%3A%2F%2Fhardawebpro.com
+
+---
+
 https://clients1.google.com.au/url?sa=t&url=https%3A%2F%2Fhardawebpro.com
 https://images.google.com/url?sa=t&url=https%3A%2F%2Fhardawebpro.com
 https://cse.google.be/url?sa=t&url=https%3A%2F%2Fhardawebpro.com
