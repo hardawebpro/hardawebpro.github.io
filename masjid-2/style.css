@@ -1392,6 +1392,15 @@ strong { color: var(--hwp-c-text); font-weight: 600; }
   align-items: flex-start;
 }
 .hwp-footer-bottom > p { font-size: 0.78rem; color: rgba(255,255,255,.35); margin: 0; }
+.hwp-footer-dev {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,.3);
+  margin: 0;
+}
+.hwp-footer-dev span {
+  color: var(--hwp-gold-400);
+  font-weight: 500;
+}
 .hwp-hwp-notice {
   display: flex;
   align-items: center;

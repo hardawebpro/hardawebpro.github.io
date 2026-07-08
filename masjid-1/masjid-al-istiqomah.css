@@ -1062,6 +1062,16 @@ body.hwp-dark .hwp-contact-panel {
   margin: 0;
 }
 
+.hwp-foot-dev {
+  font-size: 0.75rem;
+  color: rgba(169, 196, 181, 0.75);
+}
+
+.hwp-foot-dev span {
+  color: #f2c36d;
+  font-weight: 500;
+}
+
 .hwp-photo {
   opacity: .78;
 }

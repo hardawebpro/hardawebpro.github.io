@@ -1360,6 +1360,17 @@ ul.lns.pft-social-list {
   text-decoration: underline;
 }
 
+.ft-dev {
+  margin: 0.4rem 0 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.ft-dev span {
+  color: var(--clr-primary-light);
+  font-weight: 500;
+}
+
 /* ── Scroll reveal ── */
 [data-reveal] {
   opacity: 0;

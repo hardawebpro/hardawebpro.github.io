@@ -1693,6 +1693,15 @@ footer#part-footer .pft-bottom p {
   line-height: 1.5;
   color: var(--trans-light-6);
 }
+footer#part-footer .pft-dev {
+  margin-top: 0.35rem;
+  font-size: var(--fs-11);
+  color: var(--trans-light-5);
+}
+footer#part-footer .pft-dev span {
+  color: var(--trans-light-7);
+  font-weight: var(--fw-500);
+}
 @media (prefers-reduced-motion: reduce) {
   footer#part-footer .pft-social-link {
     -webkit-transition: none;

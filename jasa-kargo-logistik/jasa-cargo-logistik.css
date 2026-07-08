@@ -1065,6 +1065,17 @@ ul.lns.pft-social-list {
   color: #718096;
 }
 
+.dev-credit {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #8899a8;
+}
+
+.dev-credit span {
+  color: #a0aec0;
+  font-weight: 500;
+}
+
 .legal-notice {
   font-size: 0.75rem;
   color: #718096;

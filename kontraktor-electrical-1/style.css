@@ -954,6 +954,17 @@ ul {
   font-size: 0.7rem;
 }
 
+.hwp-footer__dev {
+  margin: 4px 0 0;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.hwp-footer__dev span {
+  color: var(--hwp-accent);
+  font-weight: 500;
+}
+
 .hwp-footer__credit a {
   color: var(--hwp-accent);
 }
