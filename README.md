@@ -94,10 +94,10 @@ _Prototype & demo preview oleh [HardaWebPro](https://hardawebpro.com) — Web De
 
 # Desain Terbaru
 
-https://hardawebpro.github.io/masjid-1/
-https://hardawebpro.github.io/masjid-2/
-https://hardawebpro.github.io/kontraktor-electrical-1/
-https://hardawebpro.github.io/compro-minimalis-1/
-https://hardawebpro.github.io/jasa-cleaning-service/
-https://hardawebpro.github.io/jasa-kargo-logistik/
-https://hardawebpro.github.io/smp-yapia-cipadu/
+- https://hardawebpro.github.io/masjid-1/
+- https://hardawebpro.github.io/masjid-2/
+- https://hardawebpro.github.io/kontraktor-electrical-1/
+- https://hardawebpro.github.io/compro-minimalis-1/
+- https://hardawebpro.github.io/jasa-cleaning-service/
+- https://hardawebpro.github.io/jasa-kargo-logistik/
+- https://hardawebpro.github.io/smp-yapia-cipadu/
