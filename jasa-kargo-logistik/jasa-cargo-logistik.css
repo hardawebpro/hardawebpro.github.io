@@ -988,6 +988,66 @@ button:focus-visible {
   margin-bottom: 12px;
 }
 
+/* pft-social — fixed template, styled to cargo palette */
+.pft-social {
+  width: 100%;
+  padding-block: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pft-social-heading {
+  margin: 0 0 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+}
+
+ul.lns.pft-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pft-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-white);
+  transition:
+    background-color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease,
+    transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.pft-social-link:hover,
+.pft-social-link:focus-visible {
+  background: var(--color-blue);
+  border-color: var(--color-orange);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(18, 102, 241, 0.35);
+}
+
+.pft-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 .footer-bottom {
   padding-top: 30px;
   padding-bottom: 30px;
