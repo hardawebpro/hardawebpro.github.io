@@ -677,6 +677,11 @@ button:focus-visible {
   padding: 25px;
   border-radius: 8px;
   border-left: 4px solid var(--color-primary-light);
+  p {
+    a {
+      color: #fff !important;
+    }
+  }
 }
 
 .trust-icon {
