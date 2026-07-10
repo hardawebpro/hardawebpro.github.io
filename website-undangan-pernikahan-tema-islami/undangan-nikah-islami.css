@@ -761,6 +761,20 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .inv-sec--dark .eyebrow::before { background: var(--gold-soft); }
 .inv-sec--dark .lead { color: rgba(255, 255, 255, 0.7); }
 
+.inv-hero a,
+.inv-sec--dark a {
+  color: var(--gold-soft);
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--gold-rgb), 0.45);
+  text-underline-offset: 0.18em;
+}
+
+.inv-hero a:hover,
+.inv-sec--dark a:hover {
+  color: var(--gold);
+  text-decoration-color: var(--gold);
+}
+
 .inv-sec__head--center {
   text-align: center;
   max-width: 540px;
