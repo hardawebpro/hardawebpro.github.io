@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -9,14 +9,14 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 	<meta name="google-site-verification" content="3jd_ZtX8x2G64HKF3e4RcdF7O4yE-hdOWrpXHWopXcA" />
-	<title>HardaWebPro on Github - Prototype &amp; Demo Preview Website HardaWebPro</title>
-	<meta name="description" content="Situs resmi HardaWebPro Web Developer Indonesia di Github - Prototype &amp; Demo Preview Website HardaWebPro di Github" />
-	<link rel="canonical" href="https://hardawebpro.github.io" />
+	<meta name="description" content="Pasang Simple WCAG Contrast Checker di Chrome, Edge, Opera, dan Firefox. Cek color contrast lokal tanpa login, langsung di halaman." />
+	<link rel="canonical" href="https://hardawebpro.github.io/blog/extension-wcag-color-contrast-checker-untuk-chrome-edge-opera-firefox.html" />
 	<meta property="og:locale" content="id_ID" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="HardaWebPro on Github - Prototype &amp; Demo Preview Website HardaWebPro" />
-	<meta property="og:description" content="Situs resmi HardaWebPro Web Developer Indonesia di Github - Prototype &amp; Demo Preview Website HardaWebPro di Github" />
-	<link rel="stylesheet" href="assets/css/global.min.css">
+	<meta property="og:title" content="Extension WCAG Color Contrast Checker untuk Chrome, Edge, Opera, Firefox" />
+	<meta property="og:description" content="Pasang Simple WCAG Contrast Checker di Chrome, Edge, Opera, dan Firefox. Cek color contrast lokal tanpa login, langsung di halaman." />
+	<link rel="stylesheet" href="../assets/css/global.min.css">
+	<title>Extension WCAG Color Contrast Checker untuk Chrome, Edge, Opera, Firefox</title>
 </head>
 
 <body>
@@ -46,98 +46,176 @@
 	</header>
 	<!-- header end above this line -->
 	<main>
-		<section id="section-hero" class="section">
-			<div class="container flex-col gap-1">
-				<div id="she-top">
-					<div id="she-logo-wr">
-						<img src="https://hardawebpro.com/wp-content/uploads/2026/06/hardawebpro-180x180-1.png" alt="HardaWebPro Logo" title="HardaWebPro Logo" width="180" height="180">
+		<section id="the-single" class="section small">
+			<div class="container shrink-640">
+				<header>
+					<h1>Extension Untuk Cek Color Contrast by HardaWebPro</h1>
+				</header>
+				<article id="the-content">
+					<p>Teks abu di hero sering “aman” di Figma, lalu gagal di browser nyata. Oleh karena itu kami merilis <strong>extension cek color contrast</strong> bernama <em>Simple WCAG Contrast Checker</em>. Anda membuka halaman target, klik ikon, lalu lihat elemen yang gagal ambang WCAG.</p>
+					<p>Tool ini karya <strong>HardaWebPro</strong> (Budi Haryono). Versi 1.0.0 tersedia di Chrome, Edge, Opera, dan Firefox. Tidak ada login. Tidak ada kirim data ke server. Semua analisis berjalan lokal di browser Anda.</p>
+					<p>Prasyarat singkat: browser modern, akses store resmi, dan halaman <code>http</code>/<code>https</code> yang bisa Anda buka. Estimasi waktu: 5–10 menit untuk pasang plus scan pertama.</p>
+					<div class="the-point">
+						<div class="the-point-top">
+							<p class="the-point-head">Highlight</p>
+							<small>Extension Untuk Cek Color Contrast by HardaWebPro</small>
+						</div>
+						<ul class="the-point-list">
+							<li>Simple WCAG Contrast Checker memindai teks terlihat, menghitung rasio, lalu menyorot elemen gagal dengan overlay merah.</li>
+							<li>Toggle AA (4.5:1 / 3:1) dan AAA (7:1 / 4.5:1) tersedia di panel inspector.</li>
+							<li>Fitur inti: full-page scan, live color edit, salin CSS selector, panel Shadow DOM.</li>
+							<li>Instalasi resmi lewat Chrome Web Store, Edge Add-ons, Opera Add-ons, dan Firefox AMO.</li>
+							<li>Privasi: tidak mengumpulkan data pribadi; preferensi tersimpan lokal di perangkat.</li>
+							<li>Cocok untuk developer, designer, dan QA sebelum handoff atau rilis staging.</li>
+						</ul>
 					</div>
-					<h1 class="head head-big">HardaWebPro</h1>
-					<p>Situs resmi HardaWebPro Web Developer Indonesia di Github</p>
-				</div>
-				<div id="she-bot">
-					<ul id="she-bot-list" class="lns">
-						<li><a href="https://github.com/hardawebpro" target="_blank" rel="noopener noreferrer" title="HardaWebPro GitHub" aria-label="HardaWebPro GitHub">GitHub</a></li>
-						<li><a href="https://www.linkedin.com/company/hardawebpro" target="_blank" rel="noopener noreferrer" title="HardaWebPro LinkedIn" aria-label="HardaWebPro LinkedIn">LinkedIn</a></li>
-						<li><a href="https://www.facebook.com/people/Hardawebpro/61591635085263/" target="_blank" rel="noopener noreferrer" title="HardaWebPro Facebook" aria-label="HardaWebPro Facebook">Facebook</a></li>
-						<li><a href="https://www.youtube.com/@HardaWebPro" target="_blank" rel="noopener noreferrer" title="HardaWebPro YouTube" aria-label="HardaWebPro YouTube">YouTube</a></li>
-						<li><a href="https://hardawebpro.com/	" target="_blank" rel="noopener noreferrer" title="HardaWebPro Website" aria-label="HardaWebPro Website">Website</a></li>
+					<h2>Apa Itu Simple WCAG Contrast Checker</h2>
+					<p>Simple WCAG Contrast Checker adalah <strong>extension cek color contrast</strong> di kategori developer tools. Ia memverifikasi kontras teks terhadap latar di halaman yang sedang terbuka.</p>
+					<p>Cara kerjanya langsung. Anda klik ikon extension. Panel inspector terbuka. Extension memindai elemen teks terlihat, menghitung <em>contrast ratio</em>, lalu menandai yang gagal standar terpilih.</p>
+					<p>Menurut kami, nilai utamanya bukan “kalkulator hex dua warna”. Melainkan peta masalah di halaman nyata: tombol CTA, label form, caption, dan teks di atas foto hero.</p>
+					<p>Batasan jujur: tool ini mengecek kontras warna saja. Ia tidak mengganti audit keyboard, screen reader, atau ARIA. Juga bukan sertifikasi resmi W3C.</p>
+					<p>Referensi ambang resmi ada di dokumentasi <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener" title="W3C Understanding Contrast Minimum WCAG 2.2">W3C Contrast (Minimum)</a>.</p>
+					<h2>Persiapan Sebelum Memasang Extension Cek Color Contrast</h2>
+					<p>Sebelum install, siapkan empat hal berikut agar langkah tidak macet di tengah jalan.</p>
+					<ol>
+						<li>Browser yang sesuai store: Chrome, Edge, Opera, atau Firefox.</li>
+						<li>Akun store bila diminta konfirmasi instalasi (Chrome/Edge sering meminta).</li>
+						<li>Halaman uji: staging, localhost, atau situs publik yang relevan.</li>
+						<li>Target standar proyek: biasanya AA dulu, AAA bila brief meminta.</li>
+					</ol>
+					<p>Bila Anda memakai kebijakan perusahaan yang memblokir store, minta IT mengizinkan listing resmi extension ini. Jangan pasang paket <code>.crx</code> dari sumber tidak dikenal.</p>
+					<p>Tips: buka dulu halaman dengan banyak teks kecil. Scan di halaman kosong membuat hasil terasa “semua aman” padahal komponen kritis belum terlihat.</p>
+					<h2>Cara Pakai Panel Inspector Step by Step</h2>
+					<p>Alur di empat browser hampir sama setelah ikon muncul di toolbar. Ikuti langkah bernomor di bawah.</p>
+					<ol>
+						<li>Buka halaman yang ingin Anda uji.</li>
+						<li>Klik ikon Simple WCAG Contrast Checker di toolbar.</li>
+						<li>Pilih standar AA atau AAA di panel.</li>
+						<li>Biarkan scan berjalan pada teks terlihat.</li>
+						<li>Perhatikan overlay merah dan label rasio pada elemen gagal.</li>
+						<li>Klik elemen tersorot untuk membuka editor warna live.</li>
+						<li>Sesuaikan foreground/background sampai rasio lulus.</li>
+						<li>Salin CSS selector atau hex bila perlu perbaikan di kode.</li>
+						<li>Tekan Esc atau klik tutup untuk menutup panel.</li>
+					</ol>
+					<p>Jika berhasil, Anda melihat overlay merah hanya pada elemen gagal. Panel juga mengingat posisi, ukuran, opacity, dan standar terakhir. Jadi sesi QA berikutnya tidak mulai dari nol.</p>
+					<p>Live edit bersifat inspeksi di halaman aktif. Perubahan belum otomatis masuk file CSS proyek. Anda tetap menyalin nilai final ke stylesheet atau design token.</p>
+					<h3>Fitur yang Sering Kami Pakai Saat QA</h3>
+					<p>Full-page scan paling berguna di halaman panjang: pricing, blog, atau form multi-step. Satu klik menghemat hover elemen satu per satu.</p>
+					<p>Salin CSS selector memangkas tebak class di page builder WordPress. Shadow DOM isolation menjaga panel tidak “hancur” oleh CSS reset tema agresif.</p>
+					<p>Trade-off: konten di luar viewport, modal tertutup, atau tab nonaktif mungkin belum ikut scan. Buka state tersebut dulu, lalu scan ulang.</p>
+					<h2>Pasang Extension Cek Color Contrast di Chrome Web Store</h2>
+					<p>Chrome masih jadi browser kerja harian banyak front-end di Indonesia. Jadi listing Chrome sering jadi pintu masuk pertama.</p>
+					<p><strong>Nama di store:</strong> Simple WCAG Contrast Checker
+						<br />
+						<strong>Provider:</strong> Google Chrome Web Store
+						<br />
+						<strong>Repository / listing:</strong> <a href="https://chromewebstore.google.com/detail/simple-wcag-contrast-chec/aloipkoikfeahobepfcophmdofpajeal" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Chrome Web Store">Chrome Web Store — Simple WCAG Contrast Checker</a>
+					</p>
+					<ol>
+						<li>Buka listing Chrome di atas lewat Chrome desktop.</li>
+						<li>Klik <strong>Add to Chrome</strong>, lalu konfirmasi izin.</li>
+						<li>Pin ikon extension agar mudah diklik saat QA.</li>
+						<li>Buka halaman uji dan jalankan scan AA.</li>
+					</ol>
+					<p>Detail teknis listing: versi 1.0.0, ukuran sekitar 519KiB, bahasa antarmuka English (United States). Developer listing mencantumkan Budi Haryono / <strong>HardaWebPro</strong>.</p>
+					<p>Jika berhasil, ikon muncul di toolbar dan panel terbuka tanpa error. Bila tombol Add disabled, pastikan Anda memakai Chrome stabil, bukan mode guest yang membatasi extension.</p>
+					<h2>Pasang di Microsoft Edge Add-ons</h2>
+					<p>Banyak kantor mengunci browser ke Edge. Alur cek kontras tetap bisa sama tanpa memaksa tim pindah ke Chrome.</p>
+					<p><strong>Nama di store:</strong> Simple WCAG Contrast Checker
+						<br />
+						<strong>Provider:</strong> Microsoft Edge Add-ons
+						<br />
+						<strong>Repository / listing:</strong> <a href="https://microsoftedge.microsoft.com/addons/detail/simple-wcag-contrast-chec/imelcjpnngaanldlfjeinbfkkknhfaga" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Microsoft Edge Add-ons">Edge Add-ons — Simple WCAG Contrast Checker</a>
+					</p>
+					<ol>
+						<li>Buka listing Edge Add-ons di atas memakai Microsoft Edge.</li>
+						<li>Klik tombol Get / Install, lalu izinkan instalasi.</li>
+						<li>Buka halaman staging dan klik ikon extension.</li>
+						<li>Toggle AA, scan, lalu catat elemen gagal ke ticket.</li>
+					</ol>
+					<p>Karena Edge berbasis Chromium, fitur panel mirip Chrome: overlay gagal, live color edit, salin selector, dan preferensi tersimpan lokal.</p>
+					<p>Namun versi Edge enterprise kadang memblokir sideload. Pakai jalur store resmi agar kebijakan IT lebih mudah menyetujui.</p>
+					<p>Jika panel tidak muncul, cek Extensions di <code>edge://extensions</code> dan pastikan extension aktif. Restart Edge bila ikon belum ter-render setelah install.</p>
+					<h2>Pasang di Opera Add-ons</h2>
+					<p>Opera kurang dominan di korporate. Akan tetapi sebagian freelancer dan power user tetap memakainya sehari-hari.</p>
+					<p><strong>Nama di store:</strong> Simple WCAG Contrast Checker
+						<br />
+						<strong>Provider:</strong> Opera Add-ons
+						<br />
+						<strong>Repository / listing:</strong> <a href="https://addons.opera.com/en/extensions/details/simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Opera Add-ons">Opera Add-ons — Simple WCAG Contrast Checker</a>
+					</p>
+					<ol>
+						<li>Buka listing Opera Add-ons lewat browser Opera.</li>
+						<li>Pasang extension dari halaman detail resmi.</li>
+						<li>Izinkan akses data situs bila dialog permission muncul.</li>
+						<li>Uji scan pada halaman yang sama dengan checklist Chrome/Edge.</li>
+					</ol>
+					<p>Deskripsi store Opera menekankan panel mengambang, overlay merah berisi rasio, editor warna live, serta toggle AA/AAA. Panel bisa digeser, diubah ukuran, dan punya slider opacity.</p>
+					<p>Permission tipikal: akses data di semua situs (untuk scan DOM) dan tulis ke clipboard (untuk salin selector/hex). Analisis tetap lokal.</p>
+					<p>Bila Anda QA lintas browser Chromium, samakan checklist: tombol paket, badge promo, label harga, dan teks kecil footer.</p>
+					<h2>Pasang di Firefox Add-ons (AMO)</h2>
+					<p>Firefox punya ekosistem add-on sendiri. Listing AMO berguna bila tim QA memakai Firefox sebagai browser sekunder atau utama.</p>
+					<p><strong>Nama di store:</strong> Simple WCAG Contrast Checker
+						<br />
+						<strong>Provider:</strong> Firefox Browser Add-ons (AMO)
+						<br />
+						<strong>Repository / listing:</strong> <a href="https://addons.mozilla.org/en-US/firefox/addon/simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Firefox Add-ons">Firefox AMO — Simple WCAG Contrast Checker</a>
+					</p>
+					<p>Profil publisher HardaWebPro di AMO: <a href="https://addons.mozilla.org/en-US/firefox/user/20026700/" target="_blank" rel="noopener" title="Profil publisher HardaWebPro di Firefox Add-ons">addons.mozilla.org/user/20026700</a>.</p>
+					<ol>
+						<li>Buka listing Firefox AMO di atas memakai Firefox.</li>
+						<li>Klik Add to Firefox, lalu konfirmasi permission.</li>
+						<li>Buka halaman <code>http</code> atau <code>https</code> yang didukung.</li>
+						<li>Jalankan scan, klik item summary untuk inspeksi warna.</li>
+						<li>Rescan setelah DOM berubah (navigasi, tab konten, modal).</li>
+					</ol>
+					<p>Di Firefox, deskripsi listing menekankan summary issues, click-to-inspect, custom color picker, salin selector, serta salin hex foreground/background. Versi 1.0.0 berukuran sekitar 59.65 KB.</p>
+					<p>Developer menyatakan tidak ada pengumpulan data. Permission mencakup akses data situs dan tulis clipboard. Tekan Esc untuk menutup panel.</p>
+					<p>Jika berhasil, overlay dan daftar issues muncul pada teks yang gagal. Bila halaman <code>about:</code> atau skema khusus tidak terbuka, pindah ke URL web biasa lalu coba lagi.</p>
+					<h2>Ambang WCAG AA dan AAA di Extension Cek Color Contrast</h2>
+					<p>Angka rasio mudah disalahartikan tanpa konteks ambang. Pakai tabel berikut sebagai acuan cepat saat memilih toggle di panel.</p>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Jenis teks</th>
+									<th>AA (minimum)</th>
+									<th>AAA (enhanced)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Teks normal</td>
+									<td>4.5:1</td>
+									<td>7:1</td>
+								</tr>
+								<tr>
+									<td>Large text</td>
+									<td>3:1</td>
+									<td>4.5:1</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p><em>Large text</em> umumnya ≈24px regular atau ≈18.66px bold. Font tipis atau display aneh bisa membuat ukuran “besar” terasa lebih kecil secara visual.</p>
+					<p>Kami biasanya mulai dari AA untuk proyek UMKM dan company profile. AAA membatasi palet pastel. Desain soft sering lulus AA namun gagal AAA.</p>
+					<p>Dokumentasi enhanced ada di <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html" target="_blank" rel="noopener" title="W3C Understanding Contrast Enhanced WCAG 2.2">W3C Contrast (Enhanced)</a>. Baca itu bila stakeholder memaksa AAA di seluruh body copy.</p>
+					<h2>Troubleshooting Overlay Tidak Muncul atau Rasio Aneh</h2>
+					<p>Beberapa error sering muncul di lapangan. Cek daftar ini sebelum menganggap extension rusak.</p>
+					<ul>
+						<li>Ikon ada, panel kosong: refresh halaman, pastikan skema URL didukung.</li>
+						<li>Tidak ada overlay: mungkin semua teks lulus, atau teks tersembunyi di state lain.</li>
+						<li>Rasio beda dari Figma: browser memakai warna computed + opacity nyata.</li>
+						<li>Clipboard gagal: izinkan permission clipboard di pengaturan extension.</li>
+						<li>Panel “aneh” di tema custom: pastikan build terbaru; Shadow DOM sudah mengisolasi UI.</li>
 					</ul>
-				</div>
+					<p>Andaikata scan menandai teks di atas gambar hero, coba sesuaikan overlay foto, bukan hanya hex teks. Latar foto terang sering jadi penyebab tersembunyi.</p>
+					<p>Untuk fondasi aksesibilitas lebih luas, baca juga <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noopener" title="W3C Introduction to Web Accessibility">W3C Introduction to Web Accessibility</a>.</p>
+					<p>Extension cek color contrast dari <strong>HardaWebPro</strong> menyelesaikan satu pekerjaan dengan tajam: memastikan teks terbaca menurut ambang WCAG sebelum rilis. Pasang di browser kerja Anda, jalankan scan AA, lalu perbaiki token warna yang gagal.</p>
+				</article>
 			</div>
 		</section>
-		<!-- demo site start -->
-		<section id="section-demo" class="section medium">
-			<div class="container flex-col gap-1">
-				<div id="sdo-top">
-					<h2 class="head head-big">Ide, Prototype &amp; Demo Preview Website HardaWebPro</h2>
-					<p>Lihat beberapa contoh ide, prototype, dan demo preview website HardaWebPro.</p>
-				</div>
-				<div id="sdo-bot">
-					<div class="demo-site-wr">
-						<!-- masjid 1 -->
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/masjid-1/" target="_blank" rel="noopener noreferrer" title="Masjid 1" aria-label="Masjid 1">Masjid 1</a> <span class="demo-desc">Contoh Desain &amp; prototype Demo Website masjid 1</span></h3>
-						</div>
-						<!-- masjid 2 -->
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/masjid-2/" target="_blank" rel="noopener noreferrer" title="Masjid 2" aria-label="Masjid 2">Masjid 2</a> <span class="demo-desc">Contoh Desain &amp; prototype Demo Website masjid 2</span></h3>
-						</div>
-						<!-- kontraktor electrical 1 -->
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/kontraktor-electrical-1/" target="_blank" rel="noopener noreferrer" title="Kontraktor Electrical 1" aria-label="Kontraktor Electrical 1">Kontraktor Electrical 1</a> <span class="demo-desc">Contoh Desain &amp; prototype Demo Website kontraktor electrical 1</span></h3>
-						</div>
-						<!-- compro minimalis 1 -->
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/compro-minimalis-1/" target="_blank" rel="noopener noreferrer" title="Compro Minimalis 1" aria-label="Compro Minimalis 1">Compro Minimalis 1</a> <span class="demo-desc">Company profile B2B minimalis — Kenko Electric Indonesia, supplier timbangan digital</span></h3>
-						</div>
-						<!-- jasa cleaning service -->
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/jasa-cleaning-service/" target="_blank" rel="noopener noreferrer" title="Jasa Cleaning Service" aria-label="Jasa Cleaning Service">Jasa Cleaning Service</a> <span class="demo-desc">Contoh Desain &amp; prototype Demo Website jasa cleaning service</span></h3>
-						</div>
-						<!-- jasa cargo logistik -->
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/jasa-kargo-logistik/" target="_blank" rel="noopener noreferrer" title="Jasa Kargo Logistik" aria-label="Jasa Kargo Logistik">Jasa Kargo Logistik</a> <span class="demo-desc">Contoh Desain &amp; prototype Demo Website jasa Kargo logistik — pengiriman barang bisnis</span></h3>
-						</div>
-						<!-- smp yapia cipadu -->
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/smp-yapia-cipadu/" target="_blank" rel="noopener noreferrer" title="SMP YAPIA Cipadu" aria-label="SMP YAPIA Cipadu">SMP YAPIA Cipadu</a> <span class="demo-desc">Contoh Desain &amp; prototype Demo Website SMP YAPIA Cipadu</span></h3>
-						</div>
-						<!-- website undangan pernikahan tema islami -->
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/website-undangan-pernikahan-tema-islami/" target="_blank" rel="noopener noreferrer" title="Website Undangan Pernikahan Tema Islami" aria-label="Website Undangan Pernikahan Tema Islami">Website Undangan Pernikahan Tema Islami</a> <span class="demo-desc">Contoh Desain &amp; prototype Demo Website website undangan pernikahan tema islami</span></h3>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- demo site end -->
-		<!-- about site start -->
-		<section id="section-about" class="section medium shrink-640">
-			<div class="container flex-col gap-1">
-				<div id="sdo-top">
-					<div class="logo">
-						<a href="https://hardawebpro.com/wp-content/uploads/2026/06/hardawebpro-180x180-1.png" target="_blank" rel="noopener noreferrer" title="HardaWebPro Logo" aria-label="HardaWebPro Logo">
-							<img src="https://hardawebpro.com/wp-content/uploads/2026/06/hardawebpro-180x180-1.png" alt="HardaWebPro Logo" title="HardaWebPro Logo" width="180" height="180">
-						</a>
-					</div>
-					<h2 class="head head-big">Tentang HardaWebPro</h2>
-					<p>Profile HardaWebPro</p>
-				</div>
-				<div id="sdo-bot">
-					<p><strong>HardaWebPro</strong> adalah studio web development dan SEO yang berbasis di Tangerang, Indonesia. Kami berfokus pada pembuatan website company profile profesional untuk perusahaan, dengan pendekatan yang menggabungkan keahlian teknis web development dan pemahaman mendalam tentang cara kerja mesin pencari modern.</p>
-					<p>Budi Haryono, pendiri HardaWebPro, aktif di industri ini lebih dari satu dekade — membangun, mengelola, dan mengoptimasi website untuk berbagai jenis bisnis di Indonesia. Sebagian pekerjaan teknis dan eksperimen kode kami dapat dilihat secara terbuka di <a href="https://github.com/hardawebpro" target="_blank" rel="noopener">repositori GitHub HardaWebPro</a>.</p>
-					<h3>Web Developer Profesional</h3>
-					<p>Kami percaya website bukan sekadar alamat digital. Website adalah representasi pertama yang dilihat calon klien sebelum mereka memutuskan apakah sebuah perusahaan layak dipercaya. Karena itu, setiap proyek yang kami kerjakan didekati dengan standar teknis yang sama: performa yang terukur, struktur yang bersih, dan kemampuan untuk ditemukan secara organik.</p>
-					<p>Selain proyek klien, kami juga mengelola beberapa eksperimen dan tools internal melalui akun <a href="https://github.com/itcomindo" target="_blank" rel="noopener">itcomindo di GitHub</a>, sebagai bagian dari proses berkelanjutan kami dalam mendalami praktik web development dan SEO yang lebih baik.</p>
-					<p>Video tutorial dan artikel teknis kami dapat dilihat di <a href="https://www.youtube.com/@HardaWebPro" target="_blank" rel="noopener">YouTube HardaWebPro</a>.</p>
-					<p>Kami hadir di berbagai platform sebagai bagian dari komitmen membangun transparansi dan keterlacakan brand. Anda dapat menemukan profil resmi kami di <a href="https://www.linkedin.com/company/hardawebpro" target="_blank" rel="noopener">LinkedIn HardaWebPro</a> untuk pembaruan profesional, serta di <a href="https://www.facebook.com/people/Hardawebpro/61591635085263/" target="_blank" rel="noopener">Facebook HardaWebPro</a> untuk interaksi dan informasi terkini seputar layanan kami.</p>
-					<p>Halaman ini adalah bagian dari jejak digital resmi kami sebagai praktisi web development dan SEO — dibangun untuk konsistensi identitas, bukan untuk promosi langsung.</p>
-					<p>Anda dapat menghubungi kami melalui <a href="https://api.whatsapp.com/?send=6281398912341&text=Hello%20HardaWebPro%20Developer%20Indonesia" target="_blank" rel="noopener noreferrer" title="HardaWebPro WhatsApp" aria-label="HardaWebPro WhatsApp">WhatsApp</a> atau melalui email.</p>
-				</div>
-			</div>
-		</section>
-		<!-- about site end -->
 	</main>
 	<!-- footer start -->
 	<footer id="part-footer" class="section has-accent">

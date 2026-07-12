@@ -40,8 +40,16 @@ nav#header-menu-nav {
   ul.lns.header-menu-list {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     font-size: 1rem;
     font-weight: var(--fw-700);
+    @media (min-width: 1025px) {
+      flex-direction: row;
+      gap: 1rem;
+    }
     li {
       a {
         color: var(--cp-bg-primary);
