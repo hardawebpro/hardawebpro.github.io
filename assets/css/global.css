@@ -1591,6 +1591,12 @@ section#section-about .container #sdo-bot p a {
   width: 100%;
   overflow: hidden;
 }
+#the-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
 #the-content hr {
   margin: 2rem 0;
   border: 0;
