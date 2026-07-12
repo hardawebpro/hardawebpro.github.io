@@ -52,6 +52,9 @@
 					<h1>Extension Untuk Cek Color Contrast by HardaWebPro</h1>
 				</header>
 				<article id="the-content">
+					<p>Extension ini paling sering dipakai web developer, khususnya frontend web developer. Mereka menguji kontras di halaman yang sudah ter-render, bukan hanya di mockup. Dengan begitu, perbaikan warna masuk ke CSS, token, atau komponen UI sebelum merge.</p>
+					<p>Bagi frontend web developer, Simple WCAG Contrast Checker mempercepat QA visual harian. Anda scan tombol, label form, link footer, dan state hover tanpa tool eksternal. Overlay rasio membuat diskusi dengan designer lebih objektif.</p>
+					<p>Oleh karena itu, frontend web developer yang menjaga aksesibilitas UI sebaiknya memasang extension ini di browser kerja. Jalankan scan AA di staging, catat elemen gagal, lalu perbaiki token warna. Alur singkat itu mengurangi revisi “teksnya susah dibaca” setelah go-live.</p>
 					<p>Teks abu di hero sering “aman” di Figma, lalu gagal di browser nyata. Oleh karena itu kami merilis <strong>extension cek color contrast</strong> bernama <em>Simple WCAG Contrast Checker</em>. Anda membuka halaman target, klik ikon, lalu lihat elemen yang gagal ambang WCAG.</p>
 					<p>Tool ini karya <strong>HardaWebPro</strong> (Budi Haryono). Versi 1.0.0 tersedia di Chrome, Edge, Opera, dan Firefox. Tidak ada login. Tidak ada kirim data ke server. Semua analisis berjalan lokal di browser Anda.</p>
 					<p>Prasyarat singkat: browser modern, akses store resmi, dan halaman <code>http</code>/<code>https</code> yang bisa Anda buka. Estimasi waktu: 5–10 menit untuk pasang plus scan pertama.</p>
@@ -69,12 +72,48 @@
 							<li>Cocok untuk developer, designer, dan QA sebelum handoff atau rilis staging.</li>
 						</ul>
 					</div>
+					<hr />
+					<h2>Fitur</h2>
+					<ul>
+						<li><strong>Toggle WCAG AA &amp; AAA</strong> — ganti standar dengan satu klik</li>
+						<li><strong>Scan halaman penuh</strong> — mendeteksi semua elemen teks terlihat yang gagal standar kontras terpilih</li>
+						<li><strong>Highlight overlay merah</strong> — menandai setiap elemen gagal langsung di halaman beserta rasio kontrasnya</li>
+						<li><strong>Element inspector</strong> — klik elemen tersorot untuk melihat dan mengedit warna foreground serta background secara real time</li>
+						<li><strong>Rasio kontras live</strong> — memperbarui angka seketika saat Anda menyesuaikan warna</li>
+						<li><strong>Salin CSS selector</strong> — salin selector elemen gagal dengan satu klik untuk dipakai di stylesheet</li>
+						<li><strong>Panel bisa digeser &amp; diubah ukuran</strong> — posisikan inspector di mana saja di layar</li>
+						<li><strong>Kontrol transparansi panel</strong> — atur opacity agar panel tidak menutupi tampilan</li>
+						<li><strong>Pengaturan persisten</strong> — mengingat posisi, ukuran, transparansi, dan standar terpilih antar sesi</li>
+						<li><strong>Isolasi Shadow DOM</strong> — panel extension tidak bentrok dengan gaya CSS halaman host</li>
+						<li><strong>Tekan Esc untuk menutup</strong> — ramah keyboard</li>
+					</ul>
+					<hr />
+					<h2>Privasi</h2>
+					<p><strong>Simple WCAG Contrast Checker tidak mengumpulkan data pribadi apa pun.</strong></p>
+					<p>Kebijakan privasi lengkap: <a href="https://hardawebpro.com/support/privacy-policy-simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Kebijakan privasi Simple WCAG Contrast Checker">https://hardawebpro.com/support/privacy-policy-simple-wcag-contrast-checker/</a></p>
+					<hr />
+					<h2>Author</h2>
+					<ul class="lns">
+						<li><strong>Nama:</strong> <b><u>HardaWebPro</u></b></li>
+						<li><strong>URI:</strong> <b><u><a href="https://hardawebpro.com" target="_blank" rel="noopener" title="HardaWebPro" aria-label="HardaWebPro">https://hardawebpro.com</a></u></b></li>
+					</ul>
+					<hr />
+					<h2>Tech Stack</h2>
+					<ul>
+						<li><strong>Manifest V3</strong> — platform Chrome Extensions versi terbaru</li>
+						<li><strong>Vanilla JavaScript</strong> — tanpa framework, tanpa dependensi</li>
+						<li><strong>Shadow DOM</strong> — isolasi panel dari gaya CSS halaman host</li>
+						<li><strong>Chrome Storage API</strong> — penyimpanan preferensi lokal</li>
+						<li><strong>Algoritma kontras WCAG 2.1</strong> — luminansi relatif melalui linearisasi sRGB</li>
+					</ul>
+					<hr />
 					<h2>Apa Itu Simple WCAG Contrast Checker</h2>
 					<p>Simple WCAG Contrast Checker adalah <strong>extension cek color contrast</strong> di kategori developer tools. Ia memverifikasi kontras teks terhadap latar di halaman yang sedang terbuka.</p>
 					<p>Cara kerjanya langsung. Anda klik ikon extension. Panel inspector terbuka. Extension memindai elemen teks terlihat, menghitung <em>contrast ratio</em>, lalu menandai yang gagal standar terpilih.</p>
 					<p>Menurut kami, nilai utamanya bukan “kalkulator hex dua warna”. Melainkan peta masalah di halaman nyata: tombol CTA, label form, caption, dan teks di atas foto hero.</p>
 					<p>Batasan jujur: tool ini mengecek kontras warna saja. Ia tidak mengganti audit keyboard, screen reader, atau ARIA. Juga bukan sertifikasi resmi W3C.</p>
 					<p>Referensi ambang resmi ada di dokumentasi <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener" title="W3C Understanding Contrast Minimum WCAG 2.2">W3C Contrast (Minimum)</a>.</p>
+					<hr>
 					<h2>Persiapan Sebelum Memasang Extension Cek Color Contrast</h2>
 					<p>Sebelum install, siapkan empat hal berikut agar langkah tidak macet di tengah jalan.</p>
 					<ol>
@@ -85,6 +124,7 @@
 					</ol>
 					<p>Bila Anda memakai kebijakan perusahaan yang memblokir store, minta IT mengizinkan listing resmi extension ini. Jangan pasang paket <code>.crx</code> dari sumber tidak dikenal.</p>
 					<p>Tips: buka dulu halaman dengan banyak teks kecil. Scan di halaman kosong membuat hasil terasa “semua aman” padahal komponen kritis belum terlihat.</p>
+					<hr>
 					<h2>Cara Pakai Panel Inspector Step by Step</h2>
 					<p>Alur di empat browser hampir sama setelah ikon muncul di toolbar. Ikuti langkah bernomor di bawah.</p>
 					<ol>
@@ -104,14 +144,20 @@
 					<p>Full-page scan paling berguna di halaman panjang: pricing, blog, atau form multi-step. Satu klik menghemat hover elemen satu per satu.</p>
 					<p>Salin CSS selector memangkas tebak class di page builder WordPress. Shadow DOM isolation menjaga panel tidak “hancur” oleh CSS reset tema agresif.</p>
 					<p>Trade-off: konten di luar viewport, modal tertutup, atau tab nonaktif mungkin belum ikut scan. Buka state tersebut dulu, lalu scan ulang.</p>
+					<hr>
 					<h2>Pasang Extension Cek Color Contrast di Chrome Web Store</h2>
+					<img src="../assets/images/hardwebpro-chrome-(1).webp" alt="Screenshot Simple WCAG Contrast Checker di Chrome Web Store" title="Screenshot Simple WCAG Contrast Checker di Chrome Web Store" class="center" width="612" height="408">
+					<br>
+					<img src="../assets/images/hardwebpro-chrome-(2).webp" alt="Screenshot Simple WCAG Contrast Checker di Chrome Web Store" title="Screenshot Simple WCAG Contrast Checker di Chrome Web Store" class="center" width="612" height="408">
+					<br>
+					<img src="../assets/images/hardwebpro-chrome-(3).webp" alt="Screenshot Simple WCAG Contrast Checker di Chrome Web Store" title="Screenshot Simple WCAG Contrast Checker di Chrome Web Store" class="center" width="612" height="408">
+					<br>
 					<p>Chrome masih jadi browser kerja harian banyak front-end di Indonesia. Jadi listing Chrome sering jadi pintu masuk pertama.</p>
-					<p><strong>Nama di store:</strong> Simple WCAG Contrast Checker
-						<br />
-						<strong>Provider:</strong> Google Chrome Web Store
-						<br />
-						<strong>Repository / listing:</strong> <a href="https://chromewebstore.google.com/detail/simple-wcag-contrast-chec/aloipkoikfeahobepfcophmdofpajeal" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Chrome Web Store">Chrome Web Store — Simple WCAG Contrast Checker</a>
-					</p>
+					<ul class="lns">
+						<li><strong>Nama di store:</strong> <b><u>Simple WCAG Contrast Checker</u></b></li>
+						<li><strong>Provider:</strong> <b><u>Google Chrome Web Store</u></b></li>
+						<li><strong>Repository / listing:</strong> <b><u><a href="https://chromewebstore.google.com/detail/simple-wcag-contrast-chec/aloipkoikfeahobepfcophmdofpajeal" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Chrome Web Store" aria-label="Simple WCAG Contrast Checker di Chrome Web Store">Chrome Web Store — Simple WCAG Contrast Checker</a></u></b></li>
+					</ul>
 					<ol>
 						<li>Buka listing Chrome di atas lewat Chrome desktop.</li>
 						<li>Klik <strong>Add to Chrome</strong>, lalu konfirmasi izin.</li>
@@ -120,14 +166,18 @@
 					</ol>
 					<p>Detail teknis listing: versi 1.0.0, ukuran sekitar 519KiB, bahasa antarmuka English (United States). Developer listing mencantumkan Budi Haryono / <strong>HardaWebPro</strong>.</p>
 					<p>Jika berhasil, ikon muncul di toolbar dan panel terbuka tanpa error. Bila tombol Add disabled, pastikan Anda memakai Chrome stabil, bukan mode guest yang membatasi extension.</p>
+					<hr>
 					<h2>Pasang di Microsoft Edge Add-ons</h2>
+					<img src="../assets/images/wcag-edge-vdj-612.webp" alt="Screenshot Simple WCAG Contrast Checker di Microsoft Edge Add-ons" title="Screenshot Simple WCAG Contrast Checker di Microsoft Edge Add-ons" class="center" width="612" height="408">
+					<br>
+					<img src="../assets/images/wcag2-edge-oxm-612.webp" alt="Screenshot Simple WCAG Contrast Checker di Microsoft Edge Add-ons" title="Screenshot Simple WCAG Contrast Checker di Microsoft Edge Add-ons" class="center" width="612" height="408">
+					<br>
 					<p>Banyak kantor mengunci browser ke Edge. Alur cek kontras tetap bisa sama tanpa memaksa tim pindah ke Chrome.</p>
-					<p><strong>Nama di store:</strong> Simple WCAG Contrast Checker
-						<br />
-						<strong>Provider:</strong> Microsoft Edge Add-ons
-						<br />
-						<strong>Repository / listing:</strong> <a href="https://microsoftedge.microsoft.com/addons/detail/simple-wcag-contrast-chec/imelcjpnngaanldlfjeinbfkkknhfaga" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Microsoft Edge Add-ons">Edge Add-ons — Simple WCAG Contrast Checker</a>
-					</p>
+					<ul class="lns">
+						<li><strong>Nama di store:</strong> <b><u>Simple WCAG Contrast Checker</u></b></li>
+						<li><strong>Provider:</strong> <b><u>Microsoft Edge Add-ons</u></b></li>
+						<li><strong>Repository / listing:</strong> <b><u><a href="https://microsoftedge.microsoft.com/addons/detail/simple-wcag-contrast-chec/imelcjpnngaanldlfjeinbfkkknhfaga" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Microsoft Edge Add-ons" aria-label="Simple WCAG Contrast Checker di Microsoft Edge Add-ons">Edge Add-ons — Simple WCAG Contrast Checker</a></u></b></li>
+					</ul>
 					<ol>
 						<li>Buka listing Edge Add-ons di atas memakai Microsoft Edge.</li>
 						<li>Klik tombol Get / Install, lalu izinkan instalasi.</li>
@@ -137,14 +187,15 @@
 					<p>Karena Edge berbasis Chromium, fitur panel mirip Chrome: overlay gagal, live color edit, salin selector, dan preferensi tersimpan lokal.</p>
 					<p>Namun versi Edge enterprise kadang memblokir sideload. Pakai jalur store resmi agar kebijakan IT lebih mudah menyetujui.</p>
 					<p>Jika panel tidak muncul, cek Extensions di <code>edge://extensions</code> dan pastikan extension aktif. Restart Edge bila ikon belum ter-render setelah install.</p>
+					<hr>
 					<h2>Pasang di Opera Add-ons</h2>
+					<img src="../assets/images/ss-opera-1.webp" alt="Screenshot Simple WCAG Contrast Checker di Opera Add-ons" title="Screenshot Simple WCAG Contrast Checker di Opera Add-ons" class="center" width="612" height="408">
 					<p>Opera kurang dominan di korporate. Akan tetapi sebagian freelancer dan power user tetap memakainya sehari-hari.</p>
-					<p><strong>Nama di store:</strong> Simple WCAG Contrast Checker
-						<br />
-						<strong>Provider:</strong> Opera Add-ons
-						<br />
-						<strong>Repository / listing:</strong> <a href="https://addons.opera.com/en/extensions/details/simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Opera Add-ons">Opera Add-ons — Simple WCAG Contrast Checker</a>
-					</p>
+					<ul class="lns">
+						<li><strong>Nama di store:</strong> <b><u>Simple WCAG Contrast Checker</u></b></li>
+						<li><strong>Provider:</strong> <b><u>Opera Add-ons</u></b></li>
+						<li><strong>Repository / listing:</strong> <b><u><a href="https://addons.opera.com/en/extensions/details/simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Opera Add-ons" aria-label="Simple WCAG Contrast Checker di Opera Add-ons">Opera Add-ons — Simple WCAG Contrast Checker</a></u></b></li>
+					</ul>
 					<ol>
 						<li>Buka listing Opera Add-ons lewat browser Opera.</li>
 						<li>Pasang extension dari halaman detail resmi.</li>
@@ -154,65 +205,69 @@
 					<p>Deskripsi store Opera menekankan panel mengambang, overlay merah berisi rasio, editor warna live, serta toggle AA/AAA. Panel bisa digeser, diubah ukuran, dan punya slider opacity.</p>
 					<p>Permission tipikal: akses data di semua situs (untuk scan DOM) dan tulis ke clipboard (untuk salin selector/hex). Analisis tetap lokal.</p>
 					<p>Bila Anda QA lintas browser Chromium, samakan checklist: tombol paket, badge promo, label harga, dan teks kecil footer.</p>
+					<hr>
 					<h2>Pasang di Firefox Add-ons (AMO)</h2>
 					<p>Firefox punya ekosistem add-on sendiri. Listing AMO berguna bila tim QA memakai Firefox sebagai browser sekunder atau utama.</p>
-					<p><strong>Nama di store:</strong> Simple WCAG Contrast Checker
+					<ul class="lns">
+						<strong>Nama di store:</strong> Simple WCAG Contrast Checker
 						<br />
 						<strong>Provider:</strong> Firefox Browser Add-ons (AMO)
 						<br />
 						<strong>Repository / listing:</strong> <a href="https://addons.mozilla.org/en-US/firefox/addon/simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker di Firefox Add-ons">Firefox AMO — Simple WCAG Contrast Checker</a>
-					</p>
-					<p>Profil publisher HardaWebPro di AMO: <a href="https://addons.mozilla.org/en-US/firefox/user/20026700/" target="_blank" rel="noopener" title="Profil publisher HardaWebPro di Firefox Add-ons">addons.mozilla.org/user/20026700</a>.</p>
-					<ol>
-						<li>Buka listing Firefox AMO di atas memakai Firefox.</li>
-						<li>Klik Add to Firefox, lalu konfirmasi permission.</li>
-						<li>Buka halaman <code>http</code> atau <code>https</code> yang didukung.</li>
-						<li>Jalankan scan, klik item summary untuk inspeksi warna.</li>
-						<li>Rescan setelah DOM berubah (navigasi, tab konten, modal).</li>
-					</ol>
-					<p>Di Firefox, deskripsi listing menekankan summary issues, click-to-inspect, custom color picker, salin selector, serta salin hex foreground/background. Versi 1.0.0 berukuran sekitar 59.65 KB.</p>
-					<p>Developer menyatakan tidak ada pengumpulan data. Permission mencakup akses data situs dan tulis clipboard. Tekan Esc untuk menutup panel.</p>
-					<p>Jika berhasil, overlay dan daftar issues muncul pada teks yang gagal. Bila halaman <code>about:</code> atau skema khusus tidak terbuka, pindah ke URL web biasa lalu coba lagi.</p>
-					<h2>Ambang WCAG AA dan AAA di Extension Cek Color Contrast</h2>
-					<p>Angka rasio mudah disalahartikan tanpa konteks ambang. Pakai tabel berikut sebagai acuan cepat saat memilih toggle di panel.</p>
-					<div class="table-wrapper">
-						<table>
-							<thead>
-								<tr>
-									<th>Jenis teks</th>
-									<th>AA (minimum)</th>
-									<th>AAA (enhanced)</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Teks normal</td>
-									<td>4.5:1</td>
-									<td>7:1</td>
-								</tr>
-								<tr>
-									<td>Large text</td>
-									<td>3:1</td>
-									<td>4.5:1</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<p><em>Large text</em> umumnya ≈24px regular atau ≈18.66px bold. Font tipis atau display aneh bisa membuat ukuran “besar” terasa lebih kecil secara visual.</p>
-					<p>Kami biasanya mulai dari AA untuk proyek UMKM dan company profile. AAA membatasi palet pastel. Desain soft sering lulus AA namun gagal AAA.</p>
-					<p>Dokumentasi enhanced ada di <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html" target="_blank" rel="noopener" title="W3C Understanding Contrast Enhanced WCAG 2.2">W3C Contrast (Enhanced)</a>. Baca itu bila stakeholder memaksa AAA di seluruh body copy.</p>
-					<h2>Troubleshooting Overlay Tidak Muncul atau Rasio Aneh</h2>
-					<p>Beberapa error sering muncul di lapangan. Cek daftar ini sebelum menganggap extension rusak.</p>
-					<ul>
-						<li>Ikon ada, panel kosong: refresh halaman, pastikan skema URL didukung.</li>
-						<li>Tidak ada overlay: mungkin semua teks lulus, atau teks tersembunyi di state lain.</li>
-						<li>Rasio beda dari Figma: browser memakai warna computed + opacity nyata.</li>
-						<li>Clipboard gagal: izinkan permission clipboard di pengaturan extension.</li>
-						<li>Panel “aneh” di tema custom: pastikan build terbaru; Shadow DOM sudah mengisolasi UI.</li>
-					</ul>
-					<p>Andaikata scan menandai teks di atas gambar hero, coba sesuaikan overlay foto, bukan hanya hex teks. Latar foto terang sering jadi penyebab tersembunyi.</p>
-					<p>Untuk fondasi aksesibilitas lebih luas, baca juga <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noopener" title="W3C Introduction to Web Accessibility">W3C Introduction to Web Accessibility</a>.</p>
-					<p>Extension cek color contrast dari <strong>HardaWebPro</strong> menyelesaikan satu pekerjaan dengan tajam: memastikan teks terbaca menurut ambang WCAG sebelum rilis. Pasang di browser kerja Anda, jalankan scan AA, lalu perbaiki token warna yang gagal.</p>
+						</h>
+						<p>Profil publisher HardaWebPro di AMO: <a href="https://addons.mozilla.org/en-US/firefox/user/20026700/" target="_blank" rel="noopener" title="Profil publisher HardaWebPro di Firefox Add-ons">addons.mozilla.org/user/20026700</a>.</p>
+						<ol>
+							<li>Buka listing Firefox AMO di atas memakai Firefox.</li>
+							<li>Klik Add to Firefox, lalu konfirmasi permission.</li>
+							<li>Buka halaman <code>http</code> atau <code>https</code> yang didukung.</li>
+							<li>Jalankan scan, klik item summary untuk inspeksi warna.</li>
+							<li>Rescan setelah DOM berubah (navigasi, tab konten, modal).</li>
+						</ol>
+						<p>Di Firefox, deskripsi listing menekankan summary issues, click-to-inspect, custom color picker, salin selector, serta salin hex foreground/background. Versi 1.0.0 berukuran sekitar 59.65 KB.</p>
+						<p>Developer menyatakan tidak ada pengumpulan data. Permission mencakup akses data situs dan tulis clipboard. Tekan Esc untuk menutup panel.</p>
+						<p>Jika berhasil, overlay dan daftar issues muncul pada teks yang gagal. Bila halaman <code>about:</code> atau skema khusus tidak terbuka, pindah ke URL web biasa lalu coba lagi.</p>
+						<hr>
+						<h2>Ambang WCAG AA dan AAA di Extension Cek Color Contrast</h2>
+						<p>Angka rasio mudah disalahartikan tanpa konteks ambang. Pakai tabel berikut sebagai acuan cepat saat memilih toggle di panel.</p>
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<tr>
+										<th>Jenis teks</th>
+										<th>AA (minimum)</th>
+										<th>AAA (enhanced)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Teks normal</td>
+										<td>4.5:1</td>
+										<td>7:1</td>
+									</tr>
+									<tr>
+										<td>Large text</td>
+										<td>3:1</td>
+										<td>4.5:1</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p><em>Large text</em> umumnya ≈24px regular atau ≈18.66px bold. Font tipis atau display aneh bisa membuat ukuran “besar” terasa lebih kecil secara visual.</p>
+						<p>Kami biasanya mulai dari AA untuk proyek UMKM dan company profile. AAA membatasi palet pastel. Desain soft sering lulus AA namun gagal AAA.</p>
+						<p>Dokumentasi enhanced ada di <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html" target="_blank" rel="noopener" title="W3C Understanding Contrast Enhanced WCAG 2.2">W3C Contrast (Enhanced)</a>. Baca itu bila stakeholder memaksa AAA di seluruh body copy.</p>
+						<hr>
+						<h2>Troubleshooting Overlay Tidak Muncul atau Rasio Aneh</h2>
+						<p>Beberapa error sering muncul di lapangan. Cek daftar ini sebelum menganggap extension rusak.</p>
+						<ul>
+							<li>Ikon ada, panel kosong: refresh halaman, pastikan skema URL didukung.</li>
+							<li>Tidak ada overlay: mungkin semua teks lulus, atau teks tersembunyi di state lain.</li>
+							<li>Rasio beda dari Figma: browser memakai warna computed + opacity nyata.</li>
+							<li>Clipboard gagal: izinkan permission clipboard di pengaturan extension.</li>
+							<li>Panel “aneh” di tema custom: pastikan build terbaru; Shadow DOM sudah mengisolasi UI.</li>
+						</ul>
+						<p>Andaikata scan menandai teks di atas gambar hero, coba sesuaikan overlay foto, bukan hanya hex teks. Latar foto terang sering jadi penyebab tersembunyi.</p>
+						<p>Untuk fondasi aksesibilitas lebih luas, baca juga <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noopener" title="W3C Introduction to Web Accessibility">W3C Introduction to Web Accessibility</a>.</p>
+						<p>Extension cek color contrast dari <strong>HardaWebPro</strong> menyelesaikan satu pekerjaan dengan tajam: memastikan teks terbaca menurut ambang WCAG sebelum rilis. Pasang di browser kerja Anda, jalankan scan AA, lalu perbaiki token warna yang gagal.</p>
 				</article>
 			</div>
 		</section>

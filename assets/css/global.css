@@ -1591,6 +1591,12 @@ section#section-about .container #sdo-bot p a {
   width: 100%;
   overflow: hidden;
 }
+#the-content hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid var(--cp-3);
+  opacity: 0.5;
+}
 #the-content a {
   text-decoration: underline;
   font-style: italic;
