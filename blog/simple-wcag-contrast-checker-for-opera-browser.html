@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -9,13 +9,13 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 	<meta name="google-site-verification" content="3jd_ZtX8x2G64HKF3e4RcdF7O4yE-hdOWrpXHWopXcA" />
-	<title>Blog HardaWebPro on Github</title>
-	<meta name="description" content="Blog HardaWebPro on Github Kumpulan artikel dan tutorial teknis web development dan SEO HardaWebPro." />
-	<link rel="canonical" href="https://hardawebpro.github.io/blog/" />
+	<title>Simple WCAG Contrast Checker for Opera Browser</title>
+	<meta name="description" content="Install Simple WCAG Contrast Checker on Opera. Scan live pages for WCAG AA/AAA text contrast failures with a local floating inspector.." />
+	<link rel="canonical" href="https://hardawebpro.github.io/blog/simple-wcag-contrast-checker-for-opera-browser.html" />
 	<meta property="og:locale" content="id_ID" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="HardaWebPro on Github - Blog HardaWebPro on Github Kumpulan artikel dan tutorial teknis web development dan SEO HardaWebPro." />
-	<meta property="og:description" content="Blog HardaWebPro on Github Kumpulan artikel dan tutorial teknis web development dan SEO HardaWebPro." />
+	<meta property="og:title" content="Simple WCAG Contrast Checker for Opera Browser" />
+	<meta property="og:description" content="Install Simple WCAG Contrast Checker on Opera. Scan live pages for WCAG AA/AAA text contrast failures with a local floating inspector.." />
 	<link rel="stylesheet" href="../assets/css/global.min.css">
 </head>
 
@@ -46,29 +46,150 @@
 	</header>
 	<!-- header end above this line -->
 	<main>
-		<!-- demo site start -->
-		<section id="section-demo" class="section medium">
-			<div class="container flex-col gap-1">
-				<div id="sdo-top">
-					<h2 class="head head-big">Ide, Prototype &amp; Demo Preview Website HardaWebPro</h2>
-					<p>Lihat beberapa contoh ide, prototype, dan demo preview website HardaWebPro.</p>
-				</div>
-				<div id="sdo-bot">
-					<div class="demo-site-wr">
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/blog/extension-wcag-color-contrast-checker.html" target="_blank" rel="noopener noreferrer" title="Extension WCAG Color Contrast Checker untuk Chrome, Edge, Opera, Firefoxi" aria-label="Extension WCAG Color Contrast Checker untuk Chrome, Edge, Opera, Firefoxi">Extension WCAG Color Contrast Checker untuk Chrome, Edge, Opera, Firefox</a></h3>
-						</div>
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/blog/simple-wcag-contrast-checker-for-opera-browser.html" target="_blank" rel="noopener noreferrer" title="Simple WCAG Contrast Checker for Opera Browser" aria-label="Simple WCAG Contrast Checker for Opera Browser">Simple WCAG Contrast Checker for Opera Browser</a></h3>
-						</div>
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/blog/wcag-contrast-checker-for-edge-browser.html" target="_blank" rel="noopener noreferrer" title="WCAG Contrast Checker for Edge Browser" aria-label="WCAG Contrast Checker for Edge Browser">WCAG Contrast Checker for Edge Browser</a></h3>
-						</div>
+		<section id="the-single" class="section small">
+			<div class="container shrink-640">
+				<header>
+					<h1>Simple WCAG Contrast Checker for Opera Browser</h1>
+				</header>
+				<article id="the-content">
+					<p>Opera is your daily driver. Sidebars stay open. Workspaces split client projects. You still need proof that body copy, labels, and buttons remain readable after CSS lands in the browser.</p>
+					<p><strong>Simple WCAG Contrast Checker</strong> brings that proof into Opera. The add-on belongs to the Developer Tools category on Opera Add-ons and ships from <strong>HardaWebPro</strong>. Click the toolbar icon. A floating panel scans visible text. Failures receive a red overlay with the contrast ratio printed on top.</p>
+					<p>Official Opera page: <a href="https://addons.opera.com/en/extensions/details/simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker on Opera Add-ons">addons.opera.com — Simple WCAG Contrast Checker</a>.</p>
+					<p>Listing snapshot for version 1.0.0: about 516.8 KB, last updated 7 July 2026, publisher hardawebpro. Service site: <a href="https://hardawebpro.com" title="HardaWebPro homepage" aria-label="Visit HardaWebPro">hardawebpro.com</a>.</p>
+					<img src="../assets/images/ss-opera-1.webp" alt="Screenshot Simple WCAG Contrast Checker di Opera Add-ons" title="Screenshot Simple WCAG Contrast Checker di Opera Add-ons" class="center" width="612" height="408">
+					<h2>Who Gains the Most from the Opera Build</h2>
+					<p>Freelance frontenders who already live in Opera gain the shortest path. You test the same engine family as Chromium without bouncing to another browser for every contrast check.</p>
+					<p>Designers reviewing a staging URL in Opera can validate muted brand colors before they approve a handoff. QA writers can attach ratio screenshots to tickets instead of vague “text looks washed out” comments.</p>
+					<p>Business owners who maintain a company site themselves can run a quick pass before a campaign launch. You do not need a design-system certificate to spot failing microcopy.</p>
+					<p>We released this Opera build because several collaborators refuse to abandon Opera’s workflow. Asking them to “just use Chrome for a11y” slowed releases. A native Opera listing removed that friction.</p>
+					<h2>What Happens After You Click the Toolbar Icon</h2>
+					<p>The inspector opens as a floating layer on the active webpage. It walks visible text nodes, calculates each contrast ratio, and marks elements that miss the selected WCAG level.</p>
+					<p>Select any highlighted node. The color editor appears. Change foreground or background. The ratio refreshes while you drag the picker—no page reload required.</p>
+					<p>One toggle flips between WCAG AA and AAA. AA aims for 4.5:1 on normal text. AAA aims for 7:1 on normal text. Large text uses the lower companion thresholds defined by WCAG.</p>
+					<p>You can drag the panel, resize it, and lower opacity when it covers a critical block. Preferences persist for the next session. Press Esc or the panel’s X control to dismiss it.</p>
+					<p>Primary rule reference: <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener" title="W3C Understanding Contrast Minimum">W3C Contrast (Minimum)</a>.</p>
+					<h2>Install from Opera Add-ons in Minutes</h2>
+					<p>Install only through the official Opera catalog. That route keeps updates and permission prompts transparent.</p>
+					<p><strong>Name:</strong> Simple WCAG Contrast Checker
+						<br />
+						<strong>Publisher:</strong> hardawebpro / <strong>HardaWebPro</strong>
+						<br />
+						<strong>Store:</strong> Opera Add-ons
+						<br />
+						<strong>URL:</strong> <a href="https://addons.opera.com/en/extensions/details/simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Install Simple WCAG Contrast Checker in Opera">Open the Opera listing</a>
+					</p>
+					<ol>
+						<li>Launch the Opera browser (desktop).</li>
+						<li>Open the listing URL above.</li>
+						<li>Add the extension from the detail page.</li>
+						<li>Review the permission dialog before you confirm.</li>
+						<li>Pin the icon so the inspector stays one click away.</li>
+						<li>Navigate to an <code>http</code> or <code>https</code> page you control or may audit.</li>
+						<li>Click the icon and confirm the floating panel appears.</li>
+					</ol>
+					<p>Plan roughly five to fifteen minutes for install, pin, and a first scan on one dense page such as a blog article or checkout form.</p>
+					<p>If Opera prompts you to download the browser itself, you opened the listing outside Opera. Switch to Opera, then return to the same URL.</p>
+					<h2>Permissions Explained Without the Scare Quotes</h2>
+					<p>Opera shows two capabilities for this extension:</p>
+					<ul>
+						<li>Access data on websites — required so the scanner can read rendered text and computed colors in the DOM.</li>
+						<li>Write to the clipboard — required so you can copy selectors and hex values into tickets or CSS.</li>
+					</ul>
+					<p>Neither permission means remote telemetry. The Opera description states that no data is collected and all processing stays local. That matches how we designed the tool.</p>
+					<p>Still, treat any extension that can read page content with care. Install the store build. Skip mirrored <code>.crx</code> archives from random blogs.</p>
+					<p>Support anchor for this product: <a href="https://hardawebpro.com/support/#simple-wcag-contrast-checker" target="_blank" rel="noopener" title="HardaWebPro support for Simple WCAG Contrast Checker">hardawebpro.com/support/#simple-wcag-contrast-checker</a>.</p>
+					<h2>A Practical Opera QA Loop You Can Repeat</h2>
+					<p>Use this loop on every staging deploy that changes colors, typography, or background media.</p>
+					<ol>
+						<li>Open the feature branch URL in Opera.</li>
+						<li>Start Simple WCAG Contrast Checker.</li>
+						<li>Leave AA selected for standard business sites.</li>
+						<li>Record every red overlay into your issue tracker.</li>
+						<li>Open one failure, adjust colors until the live ratio passes.</li>
+						<li>Copy the CSS selector, then apply the approved values in code.</li>
+						<li>Reload, rescan, and clear the ticket only when the overlay disappears.</li>
+					</ol>
+					<p>Live edits preview intent. They do not save into your repository. Someone still commits the token or stylesheet change.</p>
+					<p>Tip: scan interactive states deliberately. Open the cookie banner, mobile menu, accordion panels, and error messages. A quiet homepage can look clean while the validation toast fails AA.</p>
+					<h3>Reading Results Like a Developer, Not a Decorator</h3>
+					<p>A missing overlay does not always mean perfection. Text may sit below the fold, inside a closed dialog, or behind a carousel slide.</p>
+					<p>Conversely, a failure over a hero photo often needs a darker scrim—not a slightly blacker font alone. The background luminance drives the math as much as the type color.</p>
+					<p>When design files disagree with Opera, trust the browser. Computed styles include opacity stacks that Figma frames may simplify.</p>
+					<h2>AA Versus AAA for Brand Sites</h2>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Text category</th>
+									<th>AA target</th>
+									<th>AAA target</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Normal text</td>
+									<td>4.5:1</td>
+									<td>7:1</td>
+								</tr>
+								<tr>
+									<td>Large text</td>
+									<td>3:1</td>
+									<td>4.5:1</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
-				</div>
+					<p>Large text commonly starts near 24px regular or 18.66px bold. Display fonts with hairline strokes may still feel weak even when size qualifies as large.</p>
+					<p>Most company profile projects we ship aim for AA on body UI. AAA remains valuable for highly regulated audiences, yet it often forces richer brand pastels into darker territory.</p>
+					<p>Enhanced criteria documentation: <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html" target="_blank" rel="noopener" title="W3C Understanding Contrast Enhanced">W3C Contrast (Enhanced)</a>.</p>
+					<h2>Feature Map for Opera Users</h2>
+					<ul>
+						<li>Floating inspector launched from the Opera toolbar</li>
+						<li>Automatic scan of visible text on the current page</li>
+						<li>Red overlays that display failing contrast ratios</li>
+						<li>Click-to-edit color controls with live ratio updates</li>
+						<li>One-click switch between WCAG AA and AAA</li>
+						<li>Draggable, resizable panel with an opacity slider</li>
+						<li>Automatic save of panel preferences</li>
+						<li>Esc or X to close without hunting menus</li>
+						<li>Clipboard helpers for selectors and color values</li>
+						<li>Local-only analysis with no personal data collection</li>
+					</ul>
+					<p>Source repository linked from the Opera listing: <a href="https://github.com/itcomindo/simple-wcag-contrast-checker" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker source on GitHub">github.com/itcomindo/simple-wcag-contrast-checker</a>.</p>
+					<h2>Honest Boundaries</h2>
+					<p>Contrast is one accessibility pillar. Keyboard order, focus visibility, captions, and semantic structure still need separate checks.</p>
+					<p>This Opera extension will not issue a WCAG certificate. It will not replace a full audit. It will catch unreadable type early—usually before a client demo on a bright office monitor.</p>
+					<p>For a wider primer, see the <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noopener" title="W3C Introduction to Web Accessibility">W3C introduction to web accessibility</a>.</p>
+					<p>If you want a polished company website plus practical accessibility hygiene, <strong>HardaWebPro</strong> can help as a freelance partner—not an agency layer. Contact path: <a href="https://hardawebpro.com" title="Contact HardaWebPro" aria-label="HardaWebPro website">hardawebpro.com</a> or <code>[phone]</code>.</p>
+					<h2>Same Tool on Other Browsers</h2>
+					<p>Teams that bounce between browsers can install matching builds:</p>
+					<ul>
+						<li><a href="https://chromewebstore.google.com/detail/simple-wcag-contrast-chec/aloipkoikfeahobepfcophmdofpajeal" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker on Chrome Web Store">Chrome Web Store</a></li>
+						<li><a href="https://microsoftedge.microsoft.com/addons/detail/simple-wcag-contrast-chec/imelcjpnngaanldlfjeinbfkkknhfaga" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker on Microsoft Edge Add-ons">Microsoft Edge Add-ons</a></li>
+						<li><a href="https://addons.mozilla.org/en-US/firefox/user/20026700/" target="_blank" rel="noopener" title="HardaWebPro publisher on Firefox Add-ons">Firefox publisher profile</a></li>
+					</ul>
+					<p>Keep one shared checklist so Opera results map cleanly to Chrome or Edge tickets: primary CTA, form helper text, price labels, and footer links.</p>
+					<h2>Privacy</h2>
+					<p><strong>Simple WCAG Contrast Checker does not collect personal data.</strong> Analysis remains on your device.</p>
+					<p>Privacy policy: <a href="https://hardawebpro.com/support/privacy-policy-simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Privacy policy Simple WCAG Contrast Checker">https://hardawebpro.com/support/privacy-policy-simple-wcag-contrast-checker/</a></p>
+					<hr />
+					<h2>Tech Notes</h2>
+					<ul>
+						<li><strong>Manifest V3</strong> — modern Chromium extension model used by Opera</li>
+						<li><strong>Vanilla JavaScript</strong> — no heavy framework payload</li>
+						<li><strong>Shadow DOM</strong> — keeps the panel isolated from host-page CSS collisions</li>
+						<li><strong>Local storage preferences</strong> — panel layout and standard choice stay on device</li>
+						<li><strong>WCAG contrast algorithm</strong> — relative luminance via sRGB linearization</li>
+					</ul>
+					<p>Install <strong>Simple WCAG Contrast Checker</strong> from Opera Add-ons, scan your next staging URL on AA, and fix the ratios that fail before the client ever squints at the screen.</p>
+					<h2>Author</h2>
+					<ul class="lns">
+						<li><strong>Nama:</strong> <b><u>HardaWebPro</u></b></li>
+						<li><strong>URI:</strong> <b><u><a href="https://hardawebpro.com" target="_blank" rel="noopener" title="HardaWebPro" aria-label="HardaWebPro">https://hardawebpro.com</a></u></b></li>
+					</ul>
+				</article>
 			</div>
 		</section>
-		<!-- demo site end -->
 	</main>
 	<!-- footer start -->
 	<footer id="part-footer" class="section has-accent">
@@ -214,7 +335,7 @@
 	</footer>
 	<!-- footer end -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-YuCuk5nNmVIUfKROKeV3fpZZ5Vt9vsnq8nExr5JwEJc2r1YDVmDfujcq373eHIzjqdxwCzoKpxngIaAdRUyg3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="../assets/js/main.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 
 </html>

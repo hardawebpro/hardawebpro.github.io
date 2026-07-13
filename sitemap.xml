@@ -66,4 +66,16 @@
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
+	<url>
+		<loc>https://hardawebpro.github.io/blog/simple-wcag-contrast-checker-for-opera-browser.html</loc>
+		<lastmod>2026-07-13</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://hardawebpro.github.io/blog/wcag-contrast-checker-for-edge-browser.html</loc>
+		<lastmod>2026-07-13</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
 </urlset>

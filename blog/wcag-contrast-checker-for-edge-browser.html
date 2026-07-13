@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -9,13 +9,13 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 	<meta name="google-site-verification" content="3jd_ZtX8x2G64HKF3e4RcdF7O4yE-hdOWrpXHWopXcA" />
-	<title>Blog HardaWebPro on Github</title>
-	<meta name="description" content="Blog HardaWebPro on Github Kumpulan artikel dan tutorial teknis web development dan SEO HardaWebPro." />
-	<link rel="canonical" href="https://hardawebpro.github.io/blog/" />
+	<title>WCAG Contrast Checker For Edge Browser</title>
+	<meta name="description" content="Pasang Simple WCAG Contrast Checker di Edge Browser. Cek color contrast lokal tanpa login, langsung di halaman." />
+	<link rel="canonical" href="https://hardawebpro.github.io/blog/wcag-contrast-checker-for-edge-browser.html" />
 	<meta property="og:locale" content="id_ID" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="HardaWebPro on Github - Blog HardaWebPro on Github Kumpulan artikel dan tutorial teknis web development dan SEO HardaWebPro." />
-	<meta property="og:description" content="Blog HardaWebPro on Github Kumpulan artikel dan tutorial teknis web development dan SEO HardaWebPro." />
+	<meta property="og:title" content="WCAG Contrast Checker For Edge Browser" />
+	<meta property="og:description" content="Pasang Simple WCAG Contrast Checker di Edge Browser. Cek color contrast lokal tanpa login, langsung di halaman." />
 	<link rel="stylesheet" href="../assets/css/global.min.css">
 </head>
 
@@ -46,29 +46,151 @@
 	</header>
 	<!-- header end above this line -->
 	<main>
-		<!-- demo site start -->
-		<section id="section-demo" class="section medium">
-			<div class="container flex-col gap-1">
-				<div id="sdo-top">
-					<h2 class="head head-big">Ide, Prototype &amp; Demo Preview Website HardaWebPro</h2>
-					<p>Lihat beberapa contoh ide, prototype, dan demo preview website HardaWebPro.</p>
-				</div>
-				<div id="sdo-bot">
-					<div class="demo-site-wr">
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/blog/extension-wcag-color-contrast-checker.html" target="_blank" rel="noopener noreferrer" title="Extension WCAG Color Contrast Checker untuk Chrome, Edge, Opera, Firefoxi" aria-label="Extension WCAG Color Contrast Checker untuk Chrome, Edge, Opera, Firefoxi">Extension WCAG Color Contrast Checker untuk Chrome, Edge, Opera, Firefox</a></h3>
-						</div>
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/blog/simple-wcag-contrast-checker-for-opera-browser.html" target="_blank" rel="noopener noreferrer" title="Simple WCAG Contrast Checker for Opera Browser" aria-label="Simple WCAG Contrast Checker for Opera Browser">Simple WCAG Contrast Checker for Opera Browser</a></h3>
-						</div>
-						<div class="demo-site-item bs-default fw-700">
-							<h3 class="head demo-title"><a class="demo-url" href="https://hardawebpro.github.io/blog/wcag-contrast-checker-for-edge-browser.html" target="_blank" rel="noopener noreferrer" title="WCAG Contrast Checker for Edge Browser" aria-label="WCAG Contrast Checker for Edge Browser">WCAG Contrast Checker for Edge Browser</a></h3>
-						</div>
+		<section id="the-single" class="section small">
+			<div class="container shrink-640">
+				<header>
+					<h1>WCAG Contrast Checker For Edge Browser</h1>
+				</header>
+				<article id="the-content">
+					<p>Your company laptop opens Microsoft Edge only. Chrome extensions stay blocked. Meanwhile staging reviews keep returning the same note: “light gray text is hard to read.”</p>
+					<p>You need a <strong>WCAG contrast checker</strong> that lives inside Edge—not another online hex form that ignores real CSS, opacity, and image backgrounds.</p>
+					<p><em>Simple WCAG Contrast Checker</em> fills that gap. <strong>HardaWebPro</strong> (Budi Haryono) published it for Edge Add-ons so developers, designers, and QA can audit contrast on the rendered page. Version 1.0.0. English UI. Local analysis only.</p>
+					<p>Get the official Edge build here: <a href="https://microsoftedge.microsoft.com/addons/detail/simple-wcag-contrast-chec/imelcjpnngaanldlfjeinbfkkknhfaga" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker Microsoft Edge Add-ons listing">microsoftedge.microsoft.com add-ons listing</a>.</p>
+					<p>Expect about ten minutes for install, pin, and a first pass on one staging URL.</p>
+					<h2>Why Edge Teams Need a Live Contrast Audit</h2>
+					<p>Design files measure two solid swatches. Browsers do not. Edge paints layered backgrounds, translucent overlays, and theme CSS that change the final luminance.</p>
+					<p>Consequently, a button that “passed” in the mockup can fail WCAG once it sits on a gradient or photo. Manual eye checks miss that. Spreadsheet hex pairs miss that too.</p>
+					<p>A page-level <strong>WCAG contrast checker</strong> reads what the user actually sees. For Edge-only workplaces, that means an add-on from Microsoft’s store—not a workaround that violates IT policy.</p>
+					<p>We built Simple WCAG Contrast Checker after repeated handoff friction on company profile sites. Soft brand palettes looked elegant. Body copy and helper text still dropped below AA.</p>
+					<h2>Install Simple WCAG Contrast Checker from Edge Add-ons</h2>
+					<p>Use Edge desktop for this path. Guest profiles and locked-down enterprise images may hide the Get button until IT unlocks store installs.</p>
+					<p><strong>Extension name:</strong> Simple WCAG Contrast Checker
+						<br />
+						<strong>Store:</strong> Microsoft Edge Add-ons
+						<br />
+						<strong>Direct URL:</strong> <a href="https://microsoftedge.microsoft.com/addons/detail/simple-wcag-contrast-chec/imelcjpnngaanldlfjeinbfkkknhfaga" target="_blank" rel="noopener" title="Get Simple WCAG Contrast Checker for Microsoft Edge">Install from Edge Add-ons</a>
+					</p>
+					<ol>
+						<li>Open the listing inside Edge—not another browser.</li>
+						<li>Press Get (or Install) and accept the permission dialog.</li>
+						<li>Open the Extensions menu and pin the icon to the toolbar.</li>
+						<li>Visit a real page: staging company site, localhost build, or production preview.</li>
+						<li>Click the icon once to confirm the inspector panel loads.</li>
+					</ol>
+					<p>Success looks simple: the icon stays on the toolbar, and a floating panel appears without console errors.</p>
+					<p>If nothing appears, open <code>edge://extensions</code>, confirm the add-on is toggled on, then reload the test tab. Restart Edge when the icon refuses to render after a fresh install.</p>
+					<p>Avoid unofficial package files. Corporate security teams approve store listings far faster than random sideloads.</p>
+					<h2>Run Your First Contrast Scan on a Real Page</h2>
+					<p>Pick a dense page first—pricing, blog post, or a long contact form. Sparse marketing heroes can hide weak secondary text.</p>
+					<ol>
+						<li>Load the URL you care about.</li>
+						<li>Open Simple WCAG Contrast Checker from the toolbar.</li>
+						<li>Set the panel to <strong>AA</strong> unless your brief already demands AAA.</li>
+						<li>Wait for the scan of visible text nodes.</li>
+						<li>Note every red overlay and the ratio printed on it.</li>
+						<li>Click one failing element to inspect foreground and background colors.</li>
+						<li>Nudge the colors in the panel until the live ratio clears the threshold.</li>
+						<li>Copy the CSS selector (and hex values) into your ticket or stylesheet.</li>
+						<li>Close with Esc when the pass feels clean enough for the next page.</li>
+					</ol>
+					<p>The panel stores layout prefs locally: position, size, opacity, and last standard. Next QA day starts where you left off.</p>
+					<p>Important: live color tweaks preview the fix in Edge only. They do not rewrite your repo. Commit the approved tokens yourself—or hand the selector to whoever owns the CSS.</p>
+					<h3>What the Red Overlay Is Telling You</h3>
+					<p>Red means fail against the selected WCAG level. Clear areas usually mean pass—or text that sits off-screen / in a closed UI state.</p>
+					<p>Therefore open modals, tabs, mobile menus, and hover styles before you call the page done. Rescan after each state change.</p>
+					<p>Selectors help when class names come from page builders. You stop guessing which wrapper owns the muted label.</p>
+					<h2>AA or AAA — Choose Before You Argue About Hex</h2>
+					<p>Arguments over “is #777 okay?” waste time. Anchor the debate to published ratios instead.</p>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Content</th>
+									<th>Level AA</th>
+									<th>Level AAA</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Regular text</td>
+									<td>4.5:1</td>
+									<td>7:1</td>
+								</tr>
+								<tr>
+									<td>Large text</td>
+									<td>3:1</td>
+									<td>4.5:1</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
-				</div>
+					<p>Large text usually means about 24px normal weight or about 18.66px bold. Ultra-thin display faces may still feel faint even when the math says “large.”</p>
+					<p>For most business brochure sites we target AA first. AAA squeezes pastel systems hard. Marketing loves soft gray-on-cream. WCAG AAA often rejects that look.</p>
+					<p>Read the primary rule on <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener" title="W3C WCAG 2.2 Contrast Minimum understanding document">W3C Contrast (Minimum)</a>. For the stricter path, open <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html" target="_blank" rel="noopener" title="W3C WCAG 2.2 Contrast Enhanced understanding document">W3C Contrast (Enhanced)</a>.</p>
+					<h2>Edge-Specific Snags We Keep Seeing</h2>
+					<img src="../assets/images/wcag-edge-vdj-612.webp" alt="Screenshot Simple WCAG Contrast Checker di Microsoft Edge Add-ons" title="Screenshot Simple WCAG Contrast Checker di Microsoft Edge Add-ons" class="center" width="612" height="408">
+					<br>
+					<img src="../assets/images/wcag2-edge-oxm-612.webp" alt="Screenshot Simple WCAG Contrast Checker di Microsoft Edge Add-ons" title="Screenshot Simple WCAG Contrast Checker di Microsoft Edge Add-ons" class="center" width="612" height="408">
+					<br>
+					<p>These issues show up more on managed Edge fleets than on personal Chrome machines.</p>
+					<ul>
+						<li><strong>Store install disabled:</strong> ask IT to allow this exact Edge Add-ons listing.</li>
+						<li><strong>Panel blank on first click:</strong> hard-refresh; skip <code>edge://</code> and similar internal pages.</li>
+						<li><strong>Zero failures yet users complain:</strong> failing copy may live in a drawer, toast, or carousel slide.</li>
+						<li><strong>Numbers disagree with design tools:</strong> trust computed styles in Edge, including alpha.</li>
+						<li><strong>Copy selector does nothing:</strong> re-enable clipboard permission for the extension.</li>
+					</ul>
+					<p>Text over photography is a classic trap. Darkening the caption hex alone rarely fixes a bright sky behind the words. Adjust the image scrim or move the type onto a solid band.</p>
+					<p>Broader accessibility context sits here: <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noopener" title="W3C web accessibility introduction">W3C accessibility introduction</a>.</p>
+					<h2>Scope Limits — So Expectations Stay Honest</h2>
+					<p>Simple WCAG Contrast Checker evaluates color contrast for visible text. That is the job.</p>
+					<p>It does not certify your site. It does not replace keyboard testing, screen-reader walkthroughs, or ARIA reviews. Treat scan output as a fast visual gate before release—not a full accessibility audit report.</p>
+					<p>Still, for frontend work, that gate saves hours. You catch muted footer links, disabled-looking CTAs, and placeholder labels before clients notice on a projector.</p>
+					<p>If your team wants a cleaner company website and less firefighting after go-live, <strong>HardaWebPro</strong> can handle build and maintenance work. Start at <a href="https://hardawebpro.com" title="HardaWebPro website services" aria-label="Open HardaWebPro website">https://hardawebpro.com</a>.</p>
+					<h2>Capability Checklist</h2>
+					<p>Inside the Edge panel you can:</p>
+					<ul>
+						<li>Switch between WCAG AA and AAA</li>
+						<li>Scan the full visible page in one pass</li>
+						<li>See failing text marked with a red overlay plus ratio</li>
+						<li>Inspect a marked node and edit colors in real time</li>
+						<li>Watch the ratio update while you tweak swatches</li>
+						<li>Copy a CSS selector for the failing element</li>
+						<li>Drag, resize, and fade the floating panel</li>
+						<li>Keep those panel prefs between sessions</li>
+						<li>Rely on Shadow DOM so host CSS cannot break the UI</li>
+						<li>Dismiss the panel with the Esc key</li>
+					</ul>
+					<h2>Listings Outside Edge</h2>
+					<p>Other browsers on your team can use matching store pages:</p>
+					<ul>
+						<li><a href="https://chromewebstore.google.com/detail/simple-wcag-contrast-chec/aloipkoikfeahobepfcophmdofpajeal" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker Chrome Web Store">Chrome Web Store listing</a></li>
+						<li><a href="https://addons.opera.com/en/extensions/details/simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker Opera Add-ons">Opera Add-ons listing</a></li>
+						<li><a href="https://addons.mozilla.org/en-US/firefox/addon/simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker Firefox Add-ons">Firefox Add-ons listing</a></li>
+					</ul>
+					<p>Firefox publisher page: <a href="https://addons.mozilla.org/en-US/firefox/user/20026700/" target="_blank" rel="noopener" title="HardaWebPro on Firefox Add-ons">HardaWebPro on AMO</a>.</p>
+					<p>Align the QA checklist across browsers: primary buttons, promo chips, price rows, and microcopy in the footer.</p>
+					<h2>Privacy</h2>
+					<p>The extension does not harvest personal data. Contrast math runs on your machine.</p>
+					<p>Policy page: <a href="https://hardawebpro.com/support/privacy-policy-simple-wcag-contrast-checker/" target="_blank" rel="noopener" title="Simple WCAG Contrast Checker privacy policy">hardawebpro.com privacy policy for this extension</a>.</p>
+					<hr />
+					<h2>Tech Stack</h2>
+					<ul>
+						<li><strong>Manifest V3</strong> — Chromium extension model that Edge supports</li>
+						<li><strong>Vanilla JavaScript</strong> — no framework lock-in</li>
+						<li><strong>Shadow DOM</strong> — UI isolation from the host document</li>
+						<li><strong>Storage API</strong> — preferences saved on device</li>
+						<li><strong>WCAG 2.1 contrast math</strong> — relative luminance from linearized sRGB</li>
+					</ul>
+					<p>Pin Simple WCAG Contrast Checker in Edge. Scan AA on staging. Fix the tokens that fail. That short loop keeps unreadable UI out of production.</p>
+					<h2>Author</h2>
+					<ul class="lns">
+						<li><strong>Nama:</strong> <b><u>HardaWebPro</u></b></li>
+						<li><strong>URI:</strong> <b><u><a href="https://hardawebpro.com" target="_blank" rel="noopener" title="HardaWebPro" aria-label="HardaWebPro">https://hardawebpro.com</a></u></b></li>
+					</ul>
+				</article>
 			</div>
 		</section>
-		<!-- demo site end -->
 	</main>
 	<!-- footer start -->
 	<footer id="part-footer" class="section has-accent">
@@ -214,7 +336,7 @@
 	</footer>
 	<!-- footer end -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-YuCuk5nNmVIUfKROKeV3fpZZ5Vt9vsnq8nExr5JwEJc2r1YDVmDfujcq373eHIzjqdxwCzoKpxngIaAdRUyg3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="../assets/js/main.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 
 </html>
